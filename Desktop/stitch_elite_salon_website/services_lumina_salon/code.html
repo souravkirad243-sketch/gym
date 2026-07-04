@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Services | Lumina Salon</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-error-container": "#93000a",
+                    "on-secondary-fixed-variant": "#514538",
+                    "on-tertiary-fixed-variant": "#474744",
+                    "error-container": "#ffdad6",
+                    "surface-variant": "#e4e2e1",
+                    "surface-container-highest": "#e4e2e1",
+                    "secondary-fixed": "#f3dfce",
+                    "tertiary-fixed-dim": "#c8c6c2",
+                    "surface-container-high": "#eae7e7",
+                    "inverse-surface": "#303030",
+                    "on-tertiary-fixed": "#1b1c19",
+                    "on-secondary-container": "#706254",
+                    "on-primary": "#ffffff",
+                    "error": "#ba1a1a",
+                    "on-surface": "#1b1c1c",
+                    "on-error": "#ffffff",
+                    "surface-bright": "#fcf9f8",
+                    "surface-container-low": "#f6f3f2",
+                    "tertiary-fixed": "#e4e2dd",
+                    "outline-variant": "#bfc9c5",
+                    "on-tertiary": "#ffffff",
+                    "on-surface-variant": "#3f4946",
+                    "surface-container": "#f0eded",
+                    "surface": "#fcf9f8",
+                    "tertiary": "#2c2c29",
+                    "primary-fixed-dim": "#95d3c4",
+                    "surface-dim": "#dcd9d9",
+                    "on-primary-fixed-variant": "#095045",
+                    "surface-tint": "#2b685c",
+                    "on-primary-fixed": "#00201b",
+                    "secondary-container": "#f3dfce",
+                    "surface-container-lowest": "#ffffff",
+                    "primary": "#00322a",
+                    "tertiary-container": "#42423f",
+                    "on-secondary": "#ffffff",
+                    "primary-fixed": "#b0efdf",
+                    "on-primary-container": "#7dbaab",
+                    "primary-container": "#004b40",
+                    "on-secondary-fixed": "#231a0f",
+                    "inverse-on-surface": "#f3f0f0",
+                    "inverse-primary": "#95d3c4",
+                    "secondary": "#6a5c4e",
+                    "on-background": "#1b1c1c",
+                    "outline": "#707976",
+                    "secondary-fixed-dim": "#d6c3b3",
+                    "background": "#fcf9f8",
+                    "on-tertiary-container": "#afaeaa"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "margin-mobile": "20px",
+                    "section-gap": "120px",
+                    "container-max": "1200px",
+                    "unit": "8px",
+                    "gutter": "24px",
+                    "margin-desktop": "64px"
+            },
+            "fontFamily": {
+                    "headline-sm": ["Playfair Display"],
+                    "headline-md": ["Playfair Display"],
+                    "caption": ["Hanken Grotesk"],
+                    "body-lg": ["Hanken Grotesk"],
+                    "display-lg-mobile": ["Playfair Display"],
+                    "display-lg": ["Playfair Display"],
+                    "label-md": ["Hanken Grotesk"],
+                    "body-md": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                    "headline-sm": ["24px", {"lineHeight": "1.4", "fontWeight": "500"}],
+                    "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "500"}],
+                    "caption": ["12px", {"lineHeight": "1.4", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "display-lg-mobile": ["36px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                    "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                    "label-md": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .backdrop-blur-nav {
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .service-line {
+            background-image: radial-gradient(circle, #f3dfce 1px, transparent 1px);
+            background-size: 8px 8px;
+            background-position: center bottom;
+            background-repeat: repeat-x;
+        }
+        .sticky-nav-active {
+            color: #00322a !important;
+            border-bottom: 2px solid #00322a;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md selection:bg-secondary-fixed selection:text-primary">
+<!-- Header / TopNavBar -->
+<header class="fixed top-0 w-full z-50 bg-surface/80 dark:bg-surface-dim/80 backdrop-blur-md border-b border-secondary-container/30 shadow-sm opacity-95">
+<nav class="flex justify-between items-center h-20 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="font-headline-md text-headline-md text-primary dark:text-primary-fixed italic cursor-pointer">
+                Lumina Salon
+            </div>
+<div class="hidden md:flex items-center space-x-8">
+<a class="font-label-md text-label-md uppercase tracking-widest text-secondary dark:text-secondary-fixed-dim hover:text-primary transition-colors cursor-pointer active:opacity-70" href="#">Home</a>
+<a class="font-label-md text-label-md uppercase tracking-widest text-primary dark:text-primary-fixed border-b-2 border-primary pb-1 cursor-pointer active:opacity-70" href="#">Services</a>
+<a class="font-label-md text-label-md uppercase tracking-widest text-secondary dark:text-secondary-fixed-dim hover:text-primary transition-colors cursor-pointer active:opacity-70" href="#">About</a>
+<a class="font-label-md text-label-md uppercase tracking-widest text-secondary dark:text-secondary-fixed-dim hover:text-primary transition-colors cursor-pointer active:opacity-70" href="#">Contact</a>
+</div>
+<button class="bg-primary text-on-primary px-6 py-2 font-label-md text-label-md uppercase tracking-widest rounded-lg hover:bg-primary-container hover:text-on-primary-container transition-all duration-300">
+                Book Now
+            </button>
+</nav>
+</header>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative h-[614px] flex items-center justify-center overflow-hidden">
+
+<div class="relative z-10 text-center px-margin-mobile">
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-4">Elevated Sanctuary</h1>
+<p class="font-body-lg text-body-lg text-secondary max-w-2xl mx-auto">Discover a curated collection of premium beauty and wellness treatments designed for renewal.</p>
+</div>
+<div class="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-background to-transparent"></div>
+</section>
+<!-- Category Shortcuts (Sticky Sub-nav) -->
+<nav class="sticky top-20 z-40 bg-surface/90 backdrop-blur-md border-b border-secondary-container/10 py-4 mb-12">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex justify-center space-x-8 md:space-x-16">
+<a class="font-label-md text-label-md uppercase tracking-widest text-secondary hover:text-primary transition-all" href="#hair">Hair</a>
+<a class="font-label-md text-label-md uppercase tracking-widest text-secondary hover:text-primary transition-all" href="#skin">Skin</a>
+<a class="font-label-md text-label-md uppercase tracking-widest text-secondary hover:text-primary transition-all" href="#wellness">Wellness</a>
+</div>
+</nav>
+<!-- Services Content -->
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop pb-section-gap">
+<!-- Hair Section -->
+<section class="mb-section-gap scroll-mt-32" id="hair">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
+<div class="lg:col-span-4 sticky top-48">
+<h2 class="font-headline-md text-headline-md text-primary mb-4 italic">Hair Artistry</h2>
+<p class="font-body-md text-body-md text-secondary mb-8">From precision cuts to bespoke color, our master stylists transform your hair into a canvas of elegance.</p>
+<div class="aspect-[3/4] rounded-xl overflow-hidden shadow-sm">
+<div class="w-full h-full bg-cover bg-center" data-alt="A high-end editorial shot of flowing, silky hair reflecting soft studio lights. The aesthetic is minimal and clean, emphasizing texture and movement against a neutral ivory background. Deep emerald accents suggest a luxurious salon environment focused on premium care." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCluDVu-gUVZdPe7hRYgxhdYDIN1il8srBITYA9ZsGEoPLKz0sumkS8P0YgEZe0dK881GicY-YSXbsv6oleOD9w87Dq8pdpRgzrlxNOwnwZXgk5qAs2ELq-i3Xbo9L9h2sXrg_udaENOdgVE_ZIDILQ4-sbGjiRvG82QTiOrBh4-kZSO_w_o3CgS0QHZcrTlYtWBhC9dHqH4g9YJev3bJ7NfKetFMv-Xo5HiWy1AmCgpFvWsXdqPOFskA')"></div>
+</div>
+</div>
+<div class="lg:col-span-8 space-y-12">
+<!-- Service Group -->
+<div>
+<h3 class="font-label-md text-label-md uppercase tracking-[0.2em] text-primary-container mb-6 border-b border-secondary-container/20 pb-2">Cuts &amp; Styling</h3>
+<div class="space-y-8">
+<div class="group flex justify-between items-end gap-4 relative">
+<div class="flex-grow">
+<div class="flex items-baseline">
+<h4 class="font-headline-sm text-headline-sm text-primary">Signature Master Cut</h4>
+<div class="flex-grow mx-2 border-b border-dotted border-secondary-fixed"></div>
+<span class="font-headline-sm text-headline-sm text-primary">$120+</span>
+</div>
+<p class="font-body-md text-body-md text-secondary mt-1 italic">Consultation, luxury wash, precision cut, and editorial blowout. (75 min)</p>
+</div>
+<button class="bg-secondary-container text-on-secondary-container px-6 py-2 rounded font-label-md text-label-md hover:bg-primary hover:text-on-primary transition-all">Book</button>
+</div>
+<div class="group flex justify-between items-end gap-4 relative">
+<div class="flex-grow">
+<div class="flex items-baseline">
+<h4 class="font-headline-sm text-headline-sm text-primary">Silk Press &amp; Finish</h4>
+<div class="flex-grow mx-2 border-b border-dotted border-secondary-fixed"></div>
+<span class="font-headline-sm text-headline-sm text-primary">$85+</span>
+</div>
+<p class="font-body-md text-body-md text-secondary mt-1 italic">Deep hydration treatment and sleek thermal styling. (60 min)</p>
+</div>
+<button class="bg-secondary-container text-on-secondary-container px-6 py-2 rounded font-label-md text-label-md hover:bg-primary hover:text-on-primary transition-all">Book</button>
+</div>
+</div>
+</div>
+<!-- Service Group -->
+<div>
+<h3 class="font-label-md text-label-md uppercase tracking-[0.2em] text-primary-container mb-6 border-b border-secondary-container/20 pb-2">Color &amp; Glow</h3>
+<div class="space-y-8">
+<div class="group flex justify-between items-end gap-4 relative">
+<div class="flex-grow">
+<div class="flex items-baseline">
+<h4 class="font-headline-sm text-headline-sm text-primary">Artisanal Balayage</h4>
+<div class="flex-grow mx-2 border-b border-dotted border-secondary-fixed"></div>
+<span class="font-headline-sm text-headline-sm text-primary">$250+</span>
+</div>
+<p class="font-body-md text-body-md text-secondary mt-1 italic">Hand-painted highlights for a natural, sun-kissed dimension. (180 min)</p>
+</div>
+<button class="bg-secondary-container text-on-secondary-container px-6 py-2 rounded font-label-md text-label-md hover:bg-primary hover:text-on-primary transition-all">Book</button>
+</div>
+<div class="group flex justify-between items-end gap-4 relative">
+<div class="flex-grow">
+<div class="flex items-baseline">
+<h4 class="font-headline-sm text-headline-sm text-primary">Glaze &amp; Tone</h4>
+<div class="flex-grow mx-2 border-b border-dotted border-secondary-fixed"></div>
+<span class="font-headline-sm text-headline-sm text-primary">$90+</span>
+</div>
+<p class="font-body-md text-body-md text-secondary mt-1 italic">Revitalize shine and neutralize unwanted tones. (45 min)</p>
+</div>
+<button class="bg-secondary-container text-on-secondary-container px-6 py-2 rounded font-label-md text-label-md hover:bg-primary hover:text-on-primary transition-all">Book</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Skin Section -->
+<section class="mb-section-gap scroll-mt-32" id="skin">
+<div class="bg-surface-container-low p-8 md:p-16 rounded-xl border border-secondary-container/20">
+<div class="max-w-4xl mx-auto">
+<div class="text-center mb-16">
+<h2 class="font-headline-md text-headline-md text-primary mb-4 italic">Dermal Therapies</h2>
+<p class="font-body-lg text-body-lg text-secondary">Advanced skincare utilizing botanical enzymes and clinical precision.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-12">
+<div class="flex flex-col h-full border-l-2 border-secondary-fixed pl-6">
+<span class="font-label-md text-label-md text-on-primary-container mb-2">60 Minutes</span>
+<h4 class="font-headline-sm text-headline-sm text-primary mb-2">Lumina Radiance Facial</h4>
+<p class="font-body-md text-body-md text-secondary flex-grow">Our signature brightening treatment using Vitamin C and oxygen infusion for immediate luminosity.</p>
+<div class="flex justify-between items-center mt-6">
+<span class="font-headline-sm text-headline-sm text-primary">$165</span>
+<button class="text-primary font-label-md text-label-md border-b-2 border-primary hover:text-secondary hover:border-secondary transition-all">Book Session</button>
+</div>
+</div>
+<div class="flex flex-col h-full border-l-2 border-secondary-fixed pl-6">
+<span class="font-label-md text-label-md text-on-primary-container mb-2">90 Minutes</span>
+<h4 class="font-headline-sm text-headline-sm text-primary mb-2">Sculpt &amp; Lift Treatment</h4>
+<p class="font-body-md text-body-md text-secondary flex-grow">Micro-current therapy combined with lymphatic drainage to contour and firm facial structure.</p>
+<div class="flex justify-between items-center mt-6">
+<span class="font-headline-sm text-headline-sm text-primary">$210</span>
+<button class="text-primary font-label-md text-label-md border-b-2 border-primary hover:text-secondary hover:border-secondary transition-all">Book Session</button>
+</div>
+</div>
+<div class="flex flex-col h-full border-l-2 border-secondary-fixed pl-6">
+<span class="font-label-md text-label-md text-on-primary-container mb-2">45 Minutes</span>
+<h4 class="font-headline-sm text-headline-sm text-primary mb-2">Enzyme Renewal Peel</h4>
+<p class="font-body-md text-body-md text-secondary flex-grow">A gentle yet effective fruit-acid exfoliation to resurface skin and minimize fine lines.</p>
+<div class="flex justify-between items-center mt-6">
+<span class="font-headline-sm text-headline-sm text-primary">$130</span>
+<button class="text-primary font-label-md text-label-md border-b-2 border-primary hover:text-secondary hover:border-secondary transition-all">Book Session</button>
+</div>
+</div>
+<div class="flex flex-col h-full border-l-2 border-secondary-fixed pl-6">
+<span class="font-label-md text-label-md text-on-primary-container mb-2">75 Minutes</span>
+<h4 class="font-headline-sm text-headline-sm text-primary mb-2">Deep Calm Hydration</h4>
+<p class="font-body-md text-body-md text-secondary flex-grow">Intensive moisture surge treatment for sensitive or environmentally stressed complexions.</p>
+<div class="flex justify-between items-center mt-6">
+<span class="font-headline-sm text-headline-sm text-primary">$175</span>
+<button class="text-primary font-label-md text-label-md border-b-2 border-primary hover:text-secondary hover:border-secondary transition-all">Book Session</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Wellness Section -->
+<section class="scroll-mt-32" id="wellness">
+<div class="text-center mb-16">
+<h2 class="font-headline-md text-headline-md text-primary mb-4 italic">Holistic Wellness</h2>
+<p class="font-body-lg text-body-lg text-secondary max-w-2xl mx-auto">Immerse yourself in tranquility with our signature spa rituals and therapeutic massages.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Spa Card -->
+<div class="bg-white p-8 border border-secondary-fixed/30 shadow-sm flex flex-col hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between mb-6">
+<span class="material-symbols-outlined text-primary text-4xl">spa</span>
+<span class="font-label-md text-label-md bg-secondary-fixed px-3 py-1 rounded-full text-on-secondary-fixed-variant">Best Seller</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-primary mb-4">Serenity Massage</h4>
+<p class="font-body-md text-body-md text-secondary mb-8 flex-grow">A rhythmic Swedish massage using warmed aromatherapy oils to release tension and restore balance.</p>
+<div class="border-t border-secondary-fixed pt-6 flex items-center justify-between">
+<div>
+<span class="block font-caption text-caption text-secondary uppercase tracking-widest">Starts at</span>
+<span class="font-headline-sm text-headline-sm text-primary">$140</span>
+</div>
+<button class="bg-primary text-on-primary px-4 py-2 rounded font-label-md text-label-md">Reserve</button>
+</div>
+</div>
+<!-- Spa Card -->
+<div class="bg-white p-8 border border-secondary-fixed/30 shadow-sm flex flex-col hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between mb-6">
+<span class="material-symbols-outlined text-primary text-4xl">water_drop</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-primary mb-4">The Ritual Package</h4>
+<p class="font-body-md text-body-md text-secondary mb-8 flex-grow">3-hour immersive experience including a full body scrub, facial, and hot stone therapy.</p>
+<div class="border-t border-secondary-fixed pt-6 flex items-center justify-between">
+<div>
+<span class="block font-caption text-caption text-secondary uppercase tracking-widest">Starts at</span>
+<span class="font-headline-sm text-headline-sm text-primary">$380</span>
+</div>
+<button class="bg-primary text-on-primary px-4 py-2 rounded font-label-md text-label-md">Reserve</button>
+</div>
+</div>
+<!-- Spa Card -->
+<div class="bg-white p-8 border border-secondary-fixed/30 shadow-sm flex flex-col hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between mb-6">
+<span class="material-symbols-outlined text-primary text-4xl">self_improvement</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-primary mb-4">Reflexology Path</h4>
+<p class="font-body-md text-body-md text-secondary mb-8 flex-grow">Targeted pressure point therapy for feet and hands to enhance overall organ health and vitality.</p>
+<div class="border-t border-secondary-fixed pt-6 flex items-center justify-between">
+<div>
+<span class="block font-caption text-caption text-secondary uppercase tracking-widest">Starts at</span>
+<span class="font-headline-sm text-headline-sm text-primary">$95</span>
+</div>
+<button class="bg-primary text-on-primary px-4 py-2 rounded font-label-md text-label-md">Reserve</button>
+</div>
+</div>
+</div>
+</section>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full pt-section-gap pb-12 bg-primary dark:bg-primary-container text-on-primary dark:text-on-primary-container">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="md:col-span-2">
+<div class="font-headline-sm text-headline-sm text-secondary-fixed mb-4">Lumina Elevated Sanctuary</div>
+<p class="font-body-md text-body-md text-on-primary/80 mb-6 max-w-md">Dedicated to the art of aesthetic refinement and soulful rejuvenation. Our boutique space offers a curated escape for the modern individual.</p>
+</div>
+<div>
+<h5 class="font-label-md text-label-md uppercase tracking-widest text-secondary-fixed mb-4">Quick Links</h5>
+<ul class="space-y-2">
+<li><a class="font-body-md text-body-md text-on-primary/80 hover:text-secondary-fixed transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="font-body-md text-body-md text-on-primary/80 hover:text-secondary-fixed transition-colors" href="#">Terms of Service</a></li>
+<li><a class="font-body-md text-body-md text-on-primary/80 hover:text-secondary-fixed transition-colors" href="#">Careers</a></li>
+<li><a class="font-body-md text-body-md text-on-primary/80 hover:text-secondary-fixed transition-colors" href="#">Instagram</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-label-md text-label-md uppercase tracking-widest text-secondary-fixed mb-4">Location</h5>
+<p class="font-body-md text-body-md text-on-primary/80 mb-2">124 Boutique Way, Ivory District</p>
+<p class="font-body-md text-body-md text-on-primary/80">Monday – Saturday: 9am – 8pm</p>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop mt-16 pt-8 border-t border-on-primary/10">
+<p class="font-body-md text-body-md text-on-primary/60 text-center">© 2024 Lumina Elevated Sanctuary. All rights reserved.</p>
+</div>
+</footer>
+<script>
+        // Simple Intersection Observer to highlight the active section in sub-nav
+        const sections = document.querySelectorAll('section[id]');
+        const navLinks = document.querySelectorAll('nav.sticky a');
+
+        const options = {
+            threshold: 0.3,
+            rootMargin: "0px 0px -40% 0px"
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    navLinks.forEach(link => {
+                        link.classList.remove('sticky-nav-active');
+                        if (link.getAttribute('href').substring(1) === entry.target.id) {
+                            link.classList.add('sticky-nav-active');
+                        }
+                    });
+                }
+            });
+        }, options);
+
+        sections.forEach(section => observer.observe(section));
+
+        // Hover Micro-interactions
+        document.querySelectorAll('.group').forEach(item => {
+            item.addEventListener('mouseenter', () => {
+                item.style.transform = 'translateX(8px)';
+                item.style.transition = 'transform 0.3s ease';
+            });
+            item.addEventListener('mouseleave', () => {
+                item.style.transform = 'translateX(0px)';
+            });
+        });
+    </script>
+</body></html>

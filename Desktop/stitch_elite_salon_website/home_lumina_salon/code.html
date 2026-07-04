@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Lumina Salon | Elevated Sanctuary</title>
+<!-- Google Fonts: Playfair Display for Serifs, Hanken Grotesk for Sans -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-error-container": "#93000a",
+                    "on-secondary-fixed-variant": "#514538",
+                    "on-tertiary-fixed-variant": "#474744",
+                    "error-container": "#ffdad6",
+                    "surface-variant": "#e4e2e1",
+                    "surface-container-highest": "#e4e2e1",
+                    "secondary-fixed": "#f3dfce",
+                    "tertiary-fixed-dim": "#c8c6c2",
+                    "surface-container-high": "#eae7e7",
+                    "inverse-surface": "#303030",
+                    "on-tertiary-fixed": "#1b1c19",
+                    "on-secondary-container": "#706254",
+                    "on-primary": "#ffffff",
+                    "error": "#ba1a1a",
+                    "on-surface": "#1b1c1c",
+                    "on-error": "#ffffff",
+                    "surface-bright": "#fcf9f8",
+                    "surface-container-low": "#f6f3f2",
+                    "tertiary-fixed": "#e4e2dd",
+                    "outline-variant": "#bfc9c5",
+                    "on-tertiary": "#ffffff",
+                    "on-surface-variant": "#3f4946",
+                    "surface-container": "#f0eded",
+                    "surface": "#fcf9f8",
+                    "tertiary": "#2c2c29",
+                    "primary-fixed-dim": "#95d3c4",
+                    "surface-dim": "#dcd9d9",
+                    "on-primary-fixed-variant": "#095045",
+                    "surface-tint": "#2b685c",
+                    "on-primary-fixed": "#00201b",
+                    "secondary-container": "#f3dfce",
+                    "surface-container-lowest": "#ffffff",
+                    "primary": "#00322a",
+                    "tertiary-container": "#42423f",
+                    "on-secondary": "#ffffff",
+                    "primary-fixed": "#b0efdf",
+                    "on-primary-container": "#7dbaab",
+                    "primary-container": "#004b40",
+                    "on-secondary-fixed": "#231a0f",
+                    "inverse-on-surface": "#f3f0f0",
+                    "inverse-primary": "#95d3c4",
+                    "secondary": "#6a5c4e",
+                    "on-background": "#1b1c1c",
+                    "outline": "#707976",
+                    "secondary-fixed-dim": "#d6c3b3",
+                    "background": "#fcf9f8",
+                    "on-tertiary-container": "#afaeaa"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "margin-mobile": "20px",
+                    "section-gap": "120px",
+                    "container-max": "1200px",
+                    "unit": "8px",
+                    "gutter": "24px",
+                    "margin-desktop": "64px"
+            },
+            "fontFamily": {
+                    "headline-sm": ["Playfair Display"],
+                    "headline-md": ["Playfair Display"],
+                    "caption": ["Hanken Grotesk"],
+                    "body-lg": ["Hanken Grotesk"],
+                    "display-lg-mobile": ["Playfair Display"],
+                    "display-lg": ["Playfair Display"],
+                    "label-md": ["Hanken Grotesk"],
+                    "body-md": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                    "headline-sm": ["24px", {"lineHeight": "1.4", "fontWeight": "500"}],
+                    "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "500"}],
+                    "caption": ["12px", {"lineHeight": "1.4", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "display-lg-mobile": ["36px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                    "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                    "label-md": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .glass-nav {
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .reveal-up {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .parallax-bg {
+            background-attachment: fixed;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body-md selection:bg-primary-fixed selection:text-primary">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 bg-surface/80 dark:bg-surface-dim/80 backdrop-blur-md border-b border-secondary-container/30 shadow-sm opacity-95">
+<nav class="flex justify-between items-center h-20 px-margin-desktop max-w-container-max mx-auto">
+<div class="font-headline-md text-headline-md text-primary dark:text-primary-fixed italic cursor-pointer">
+                Lumina Salon
+            </div>
+<div class="hidden md:flex items-center gap-10">
+<a class="font-label-md text-label-md uppercase tracking-widest text-primary dark:text-primary-fixed border-b-2 border-primary pb-1 transition-all duration-300" href="#">Home</a>
+<a class="font-label-md text-label-md uppercase tracking-widest text-secondary dark:text-secondary-fixed-dim hover:text-primary transition-colors duration-300" href="#">Services</a>
+<a class="font-label-md text-label-md uppercase tracking-widest text-secondary dark:text-secondary-fixed-dim hover:text-primary transition-colors duration-300" href="#">About</a>
+<a class="font-label-md text-label-md uppercase tracking-widest text-secondary dark:text-secondary-fixed-dim hover:text-primary transition-colors duration-300" href="#">Contact</a>
+</div>
+<button class="bg-primary text-on-primary px-8 py-3 font-label-md text-label-md uppercase tracking-widest hover:bg-primary-container hover:text-on-primary-container transition-all duration-300 rounded-[4px] active:scale-95">
+                Book Now
+            </button>
+</nav>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative h-screen flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-10000 hover:scale-110" data-alt="A wide, cinematic shot of a luxury minimalist hair salon interior. The space features ivory-toned walls, gold accents, and large mirrors reflecting soft, warm light. Lush green plants are placed strategically to create a sanctuary atmosphere. The scene is bright and airy with high-end furniture, suggesting a premium, serene beauty experience." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC7qhbJhoDxnujR4ZOqdZ24AvX0oq_mVdGD3GTd4d9o_pxcv0geVVcRj_7s_edEuc6xn8luMyNyv3WO4izTwmdizHDRWnDwJU6IjgaPPUVFZyiLlua4uPR3Qw6zlATnlvkJyjk5hS6AdG2jnMqmui-DLn4ZtdfIq-tKmtq5D3pFGZKsa52mJumQiAMDXmDSTVS023k0rkY_5ok_kGNQCQLRg-UmABBKsfIo2ahjFz0QawiRVVYCEEFgbg')">
+</div>
+<div class="absolute inset-0 bg-primary/20"></div>
+</div>
+<div class="relative z-10 px-margin-desktop max-w-container-max mx-auto w-full text-center">
+<span class="font-label-md text-label-md uppercase tracking-[0.25em] text-on-primary mb-6 block animate-pulse">Reimagine Your Radiance</span>
+<h1 class="font-display-lg text-display-lg text-on-primary mb-8 max-w-3xl mx-auto leading-tight">
+                    An Elevated Sanctuary for the Modern Soul
+                </h1>
+<p class="font-body-lg text-body-lg text-on-primary/90 mb-10 max-w-2xl mx-auto">
+                    Experience bespoke beauty rituals curated to harmonize your spirit and enhance your natural elegance in our boutique lounge.
+                </p>
+<div class="flex flex-col sm:flex-row gap-6 justify-center">
+<button class="bg-primary text-on-primary px-10 py-5 rounded-[4px] font-label-md text-label-md uppercase tracking-widest hover:shadow-xl transition-all active:scale-95">
+                        Reserve Your Session
+                    </button>
+<button class="border border-on-primary text-on-primary px-10 py-5 rounded-[4px] font-label-md text-label-md uppercase tracking-widest hover:bg-on-primary hover:text-primary transition-all">
+                        View Menu
+                    </button>
+</div>
+</div>
+<div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce">
+<span class="material-symbols-outlined text-on-primary text-4xl">expand_more</span>
+</div>
+</section>
+<!-- Our Story Section -->
+<section class="py-section-gap px-margin-desktop bg-surface relative overflow-hidden">
+<div class="max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
+<div class="relative reveal-up">
+<div class="aspect-[4/5] bg-cover bg-center rounded-lg shadow-2xl" data-alt="A close-up artistic portrait of a professional hair stylist delicately working on a client's hair. The lighting is soft and natural, emphasizing the texture of the hair and the focused, calm expression of the stylist. The background is a blurred high-end salon interior with a palette of ivory, champagne, and deep emerald accents, evoking luxury and expertise." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAP0wXPDbprKqLyYtw8b452kdD9JY0_5Su2Mfx4vzCDcPQPPFI5qtiABW3FVxQMspgSu3Oc-TtoOvCyFT1GEV0ayQGOiEAnJ_9BaFdEXz5BrAam4H9ds81UhGetFKeKYshNS26NTijJH0tE3Qdu3m3LUVOSn2AA_GpmnPRf1v_ZwUMTZtqkr-IVNm1mfdg3S5sFcTGsUMWkwUlh4Sd8ZGqYyeTGLhT4Ky6GI7PdrSCiM-T8Fu0Y5HqHwA')">
+</div>
+<div class="absolute -bottom-10 -right-10 hidden lg:block w-64 h-64 bg-secondary-fixed/50 backdrop-blur-xl p-8 rounded-lg shadow-lg border border-secondary-fixed">
+<p class="font-headline-sm text-headline-sm text-on-secondary-fixed-variant italic">"Beauty is found in the quiet moments of care."</p>
+</div>
+</div>
+<div class="reveal-up">
+<h2 class="font-headline-md text-headline-md text-primary mb-6">Our Sanctuary Story</h2>
+<div class="w-20 h-1 bg-primary-fixed-dim mb-8"></div>
+<p class="font-body-lg text-body-lg text-secondary mb-6 leading-relaxed">
+                        Founded on the principles of holistic renewal, Lumina is more than just a salon. It is a curated escape from the urban tempo—a space where time slows down and focus returns to the self.
+                    </p>
+<p class="font-body-md text-body-md text-secondary/80 mb-8 leading-relaxed">
+                        Every service at Lumina is a bespoke ritual. We combine world-class technique with organic botanical elements to ensure that you leave our sanctuary feeling revitalized, inside and out. Our master artisans are dedicated to the craft of subtle, sophisticated transformation.
+                    </p>
+<a class="group flex items-center gap-4 text-primary font-label-md uppercase tracking-widest hover:translate-x-2 transition-transform" href="#">
+                        Learn about our philosophy
+                        <span class="material-symbols-outlined group-hover:translate-x-2 transition-transform">arrow_forward</span>
+</a>
+</div>
+</div>
+</section>
+<!-- Services Highlights (Bento Style) -->
+<section class="py-section-gap px-margin-desktop bg-surface-container-low">
+<div class="max-w-container-max mx-auto">
+<div class="text-center mb-16 reveal-up">
+<span class="font-label-md text-label-md uppercase tracking-widest text-on-secondary-container">The Ritual Menu</span>
+<h2 class="font-headline-md text-headline-md text-primary mt-2">Signature Offerings</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Hair Ritual -->
+<div class="md:col-span-8 group relative overflow-hidden rounded-xl bg-white shadow-sm hover:shadow-xl transition-all duration-500 reveal-up">
+<div class="aspect-[16/9] bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="A luxurious shot of flowing, healthy hair with golden highlights. The hair has a silky texture and is captured in motion. The lighting is high-key and bright, reflecting a sophisticated and premium hair treatment result. The aesthetic is clean and modern, representing the elite hair services at Lumina Salon." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCbv8iNRXMJ3gIJfy_Nl7wIA1Jw0y88Rw9IiVkb7zZmI9Ae61SH_HlfOdYZkM16tc_DVJO4oUFtzk_6kehj6nMcbuOQDByq_H67LHw6Y3Fn9XrWM2FH90tZAl_TAklkINNOv5XZENPVUvjRNfYLJx7JWPfGZ7WLn9JMy8qiBY_DA9mI4x7feOPgOkB87VQ-qyZUi-f752LdFuwoysGj3rvWurSXhWRIbOEgcyRI5i0401uMUcMqrBfL7w')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent flex flex-col justify-end p-10 translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+<h3 class="font-headline-sm text-headline-sm text-on-primary mb-2">Artisan Hair Design</h3>
+<p class="text-on-primary/80 mb-4 max-w-md">Precision cuts, custom color-melting, and revitalizing treatments designed for your unique profile.</p>
+<span class="text-on-primary font-label-md uppercase tracking-widest border-b border-on-primary/40 pb-1 w-fit group-hover:border-on-primary transition-colors">Explore Hair Rituals</span>
+</div>
+</div>
+<!-- Nail Care -->
+<div class="md:col-span-4 group relative overflow-hidden rounded-xl bg-white shadow-sm hover:shadow-xl transition-all duration-500 reveal-up">
+<div class="h-full min-h-[400px] bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Close-up of perfectly manicured hands resting on a clean white linen cloth. The nails feature a minimalist, nude polish with a subtle gold accent. Beside the hands is a small sprig of dried eucalyptus and a luxury glass bottle of oil, creating a serene and high-end spa aesthetic focused on nail health and beauty." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDiWtmmWkQSq8hMJaobMpyt7sQCE5dRsBap6KRnxuoEev8IPS0Ex69ihlQjb_p7dcn9Qsbzl6uwDGpPUX8oT6oSsBAVRPx0t7nQgV98PvK5yOxVrLw1GwKI4iDVYen7VoIAchdnpdy-WbcLaL-yJ7RakGyDGlBnrQUX9Q-vzWW8r5RP852cbOkRZJVfICOCXUIFKoTyO-17kt1j6SG8TymrELyOBZQJRvNiEgXemKzd96hJSUMEnFIO8Q')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent flex flex-col justify-end p-8 translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+<h3 class="font-headline-sm text-headline-sm text-on-primary mb-2">Nail Artistry</h3>
+<p class="text-on-primary/80 mb-4">Sculpted elegance and mindful manicures using organic, toxic-free lacquers.</p>
+<span class="text-on-primary font-label-md uppercase tracking-widest border-b border-on-primary/40 pb-1 w-fit">Discover Manicures</span>
+</div>
+</div>
+<!-- Spa & Body -->
+<div class="md:col-span-4 group relative overflow-hidden rounded-xl bg-white shadow-sm hover:shadow-xl transition-all duration-500 reveal-up">
+<div class="h-full min-h-[400px] bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="An overhead flat-lay of spa elements: smooth basalt stones, a wooden bowl containing white sea salt, and a small glass vial of botanical oil. The background is a soft ivory-textured surface. The lighting is diffused and calming, evoking a sense of deep relaxation and wellness therapy." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAbgTEdBh_USD40xpLsOzWEtFr5veM1OF01NYR5aca85JiHiE5emZlKTuD9U-wkJ9GSlzFwPioQSC5S6aDzeF2fuc32nJV8u8518sUDhpLmbVRVG1VNW3M18ofgSDDmQuh7M8V3aGy4_fEG3dTjzNvP4tKpCrQ3MBGoJ3eEk4wwRwBlLI5oVKYCio-KRpvGzvKZx-J9DAKY_AkNiFY7FKHKCXKgffh5icwi9296XiF-pxBF9F-iz_yj3g')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent flex flex-col justify-end p-8 translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+<h3 class="font-headline-sm text-headline-sm text-on-primary mb-2">Skin &amp; Soul</h3>
+<p class="text-on-primary/80 mb-4">Rejuvenating facials and tension-melting massages in a silent sanctuary.</p>
+<span class="text-on-primary font-label-md uppercase tracking-widest border-b border-on-primary/40 pb-1 w-fit">View Spa Menu</span>
+</div>
+</div>
+<!-- Bespoke Packages -->
+<div class="md:col-span-8 group relative overflow-hidden rounded-xl bg-white shadow-sm hover:shadow-xl transition-all duration-500 reveal-up">
+<div class="aspect-[16/9] bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="A beautiful, serene salon relaxation lounge with soft velvet armchairs in deep emerald green, a low champagne-colored coffee table with high-end fashion magazines, and a minimalist fireplace. The atmosphere is warm and inviting, perfect for clients to relax before or after their beauty treatments in a luxury boutique setting." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDkdMfw8CwhNAFBDJfMuGR0ceWC9xJTFgAn3me5nIERh-dVT9cRt1h_-MJSyadLqnpLolkY0hTPb2zjkFJPMdHONoeESwW6EgTa7iQU-Yl9MVUOT6GwFqvLdT_1NziwuWtv3qdre0qNFzE926xlVMG2I0WILGexjRCCtfVgJBQGDsowYGhkZX6ZzhTVI4CVm1tJNIFBB0_Uqw0m6y88ybjxagX0Ha0TMXfCfh8SBoeHysqcxreJwAB0EQ')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent flex flex-col justify-end p-10 translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+<h3 class="font-headline-sm text-headline-sm text-on-primary mb-2">Curated Experiences</h3>
+<p class="text-on-primary/80 mb-4 max-w-md">Full-day immersion packages designed to restore balance and redefine your aesthetic from head to toe.</p>
+<span class="text-on-primary font-label-md uppercase tracking-widest border-b border-on-primary/40 pb-1 w-fit">Browse Packages</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonials -->
+<section class="py-section-gap px-margin-desktop bg-surface relative overflow-hidden">
+<div class="max-w-container-max mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+<div class="reveal-up">
+<span class="font-label-md text-label-md uppercase tracking-widest text-primary-container">Voices of Lumina</span>
+<h2 class="font-headline-md text-headline-md text-primary mt-2 mb-10">Client Reflections</h2>
+<div class="space-y-12">
+<blockquote class="border-l-4 border-primary-fixed-dim pl-8">
+<p class="font-headline-sm italic text-secondary mb-4 leading-relaxed">
+                                    "The moment I step through the doors of Lumina, the noise of the city disappears. It is truly a sanctuary where my hair and my peace of mind are both expertly cared for."
+                                </p>
+<footer class="font-label-md text-label-md uppercase tracking-widest text-primary">— Elena V., Fashion Designer</footer>
+</blockquote>
+<blockquote class="border-l-4 border-primary-fixed-dim pl-8">
+<p class="font-headline-sm italic text-secondary mb-4 leading-relaxed">
+                                    "Unparalleled service and attention to detail. My weekly manicure has become a non-negotiable ritual. The atmosphere is pure luxury without being pretentious."
+                                </p>
+<footer class="font-label-md text-label-md uppercase tracking-widest text-primary">— Marcus K., Creative Director</footer>
+</blockquote>
+</div>
+</div>
+<div class="relative reveal-up delay-200">
+<div class="aspect-square bg-cover bg-center rounded-full border-[12px] border-surface-container shadow-2xl relative z-10" data-alt="Portrait of a sophisticated, stylish woman in her 30s with glowing skin and perfectly styled hair, smiling softly in a high-end salon setting. The lighting is warm and flattering, emphasizing a sense of confidence and satisfaction after a premium beauty treatment. The background is a soft blur of the elegant Lumina Salon interior." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC7DYvJp7SJaOw1PlVyF1cSWDiDiQXZOhDGYo-ZF2fX3jPhZ8LXGYj-iatav_uAg00ayNvqAnsV2vmdZ9lmFgZFR9E033r6YUHk0QKKtj4rhDhUfjGto017REWi7hl_eyvwRunPw5sotWCarOKYQdkKDxRPZp-6XJZNc0AKtAl2lsiANMECwmRMyNz53yztKqgwvRx7TXy2tDBK-N9-53Bt0Fp_CVDkJs0g24TvSOWEMDts5Kc9EJqAbg')">
+</div>
+<!-- Abstract decorative circle -->
+<div class="absolute -top-10 -left-10 w-40 h-40 bg-secondary-fixed/30 rounded-full blur-3xl -z-10 animate-pulse"></div>
+<div class="absolute -bottom-20 -right-20 w-64 h-64 bg-primary-fixed/20 rounded-full blur-3xl -z-10"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-section-gap px-margin-desktop">
+<div class="max-w-container-max mx-auto bg-primary dark:bg-primary-container rounded-3xl overflow-hidden relative shadow-2xl reveal-up">
+
+<div class="relative z-10 px-12 py-24 text-center">
+<h2 class="font-display-lg text-display-lg text-on-primary mb-6">Begin Your Ritual</h2>
+<p class="font-body-lg text-body-lg text-on-primary/80 mb-10 max-w-xl mx-auto">
+                        Elevate your routine into a ritual of care. Our artisans are waiting to welcome you to the sanctuary.
+                    </p>
+<button class="bg-secondary-fixed text-on-secondary-fixed px-12 py-5 rounded-[4px] font-label-md text-label-md uppercase tracking-[0.2em] hover:scale-105 transition-transform shadow-lg active:scale-95">
+                        Book Your Appointment
+                    </button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full pt-section-gap pb-12 bg-primary dark:bg-primary-container">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop max-w-container-max mx-auto">
+<div class="col-span-1 md:col-span-2">
+<div class="font-headline-sm text-headline-sm text-secondary-fixed mb-6">Lumina Elevated Sanctuary</div>
+<p class="text-on-primary/70 max-w-sm mb-8 leading-relaxed">
+                    Crafting timeless elegance and mindful beauty through bespoke rituals and artisanal care. Join us in the pursuit of elevated wellness.
+                </p>
+<div class="flex gap-6">
+<a class="text-on-primary/80 hover:text-secondary-fixed transition-colors" href="#">
+<span class="sr-only">Instagram</span>
+<svg class="w-6 h-6 fill-current" viewbox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path></svg>
+</a>
+</div>
+</div>
+<div class="flex flex-col gap-4">
+<span class="font-label-md text-label-md uppercase tracking-widest text-on-primary">Quick Links</span>
+<a class="text-on-primary/80 dark:text-on-primary-container/80 hover:text-secondary-fixed transition-colors" href="#">Privacy Policy</a>
+<a class="text-on-primary/80 dark:text-on-primary-container/80 hover:text-secondary-fixed transition-colors" href="#">Terms of Service</a>
+<a class="text-on-primary/80 dark:text-on-primary-container/80 hover:text-secondary-fixed transition-colors" href="#">Careers</a>
+<a class="text-on-primary/80 dark:text-on-primary-container/80 hover:text-secondary-fixed transition-colors" href="#">Instagram</a>
+</div>
+<div class="flex flex-col gap-4">
+<span class="font-label-md text-label-md uppercase tracking-widest text-on-primary">Contact</span>
+<p class="text-on-primary/80">12 Sanctuary Blvd,<br/>Modern District, CA 90210</p>
+<p class="text-on-primary/80">+1 (555) LUMINA-01</p>
+<p class="text-on-primary/80">hello@luminasalon.com</p>
+</div>
+</div>
+<div class="mt-20 pt-8 border-t border-on-primary/10 px-margin-desktop max-w-container-max mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+<p class="font-body-md text-body-md text-on-primary/60">
+                © 2024 Lumina Elevated Sanctuary. All rights reserved.
+            </p>
+<div class="flex gap-8">
+<span class="text-on-primary/40 font-caption">Designed for Serenity</span>
+</div>
+</div>
+</footer>
+<script>
+        // Micro-interactions and reveal logic
+        document.addEventListener('DOMContentLoaded', () => {
+            const observerOptions = {
+                threshold: 0.15
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.reveal-up').forEach(el => {
+                observer.observe(el);
+            });
+
+            // Smooth header transformation on scroll
+            const header = document.querySelector('header');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 100) {
+                    header.classList.add('py-2');
+                    header.classList.remove('h-20');
+                    header.classList.add('h-16');
+                } else {
+                    header.classList.remove('py-2');
+                    header.classList.add('h-20');
+                    header.classList.remove('h-16');
+                }
+            });
+        });
+    </script>
+</body></html>
