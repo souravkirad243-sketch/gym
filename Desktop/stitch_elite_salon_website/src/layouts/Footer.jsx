@@ -7,7 +7,7 @@ export default function Footer() {
       <div className="mx-auto grid max-w-container-max grid-cols-1 gap-gutter px-margin-mobile md:grid-cols-4 md:px-margin-desktop">
         <div className="md:col-span-2">
           <Link className="mb-5 block font-display text-headline-sm text-secondary-fixed" to="/">
-            Lumina Elevated Sanctuary
+            AD Unisex Salon
           </Link>
           <p className="max-w-sm text-on-primary/75">Crafting timeless elegance and mindful beauty through bespoke rituals and artisanal care.</p>
         </div>
@@ -22,11 +22,11 @@ export default function Footer() {
           <span className="font-body text-label-md uppercase tracking-widest text-secondary-fixed">Contact</span>
           <p className="text-on-primary/80">428 Ivory Lane, Suite 100<br />Chelsea, NY 10011</p>
           <a className="text-on-primary/80 hover:text-secondary-fixed" href="tel:+12125550198">+1 (212) 555-0198</a>
-          <a className="text-on-primary/80 hover:text-secondary-fixed" href="mailto:hello@luminaelevated.com">hello@luminaelevated.com</a>
+          <a className="text-on-primary/80 hover:text-secondary-fixed" href="mailto:hello@adunisexsalon.com">hello@adunisexsalon.com</a>
         </div>
       </div>
       <div className="mx-auto mt-14 max-w-container-max border-t border-on-primary/10 px-margin-mobile pt-8 text-center text-on-primary/55 md:px-margin-desktop">
-        © 2026 Lumina Elevated Sanctuary. All rights reserved.
+        &copy; 2026 AD Unisex Salon. All rights reserved.
       </div>
     </footer>
   );

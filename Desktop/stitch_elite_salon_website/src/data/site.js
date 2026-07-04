@@ -65,7 +65,7 @@ export const serviceGroups = [
       {
         label: "Facials",
         items: [
-          { name: "Lumina Radiance Facial", description: "Vitamin C and oxygen infusion for immediate luminosity.", price: "$165", duration: "60 min" },
+          { name: "AD Radiance Facial", description: "Vitamin C and oxygen infusion for immediate luminosity.", price: "$165", duration: "60 min" },
           { name: "Sculpt & Lift Treatment", description: "Micro-current therapy with lymphatic drainage to contour and firm.", price: "$210", duration: "90 min" },
           { name: "Enzyme Renewal Peel", description: "Gentle fruit-acid exfoliation to resurface skin.", price: "$130", duration: "45 min" },
           { name: "Deep Calm Hydration", description: "Moisture surge treatment for sensitive complexions.", price: "$175", duration: "75 min" },
@@ -92,7 +92,7 @@ export const serviceGroups = [
 
 export const testimonials = [
   {
-    quote: "The moment I step through the doors of Lumina, the noise of the city disappears.",
+    quote: "The moment I step through the doors of AD Unisex Salon, the noise of the city disappears.",
     name: "Elena V.",
     role: "Fashion Designer",
   },

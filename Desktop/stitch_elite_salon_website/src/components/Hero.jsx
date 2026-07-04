@@ -5,8 +5,16 @@ export default function Hero({ eyebrow, title, text, image, compact = false }) {
     <section className={`relative flex items-center justify-center overflow-hidden ${compact ? "h-[560px]" : "min-h-screen"}`}>
       {image ? (
         <div className="absolute inset-0">
-          <div className="image-fill h-full w-full scale-105" style={{ backgroundImage: `url("${image}")` }} aria-hidden="true" />
-          <div className="absolute inset-0 bg-primary/35" />
+          <img
+            className="h-full w-full scale-105 object-cover"
+            src={image}
+            alt=""
+            loading={compact ? "lazy" : "eager"}
+            decoding="async"
+            fetchPriority={compact ? "auto" : "high"}
+            aria-hidden="true"
+          />
+          <div className="absolute inset-0 bg-primary/50" />
         </div>
       ) : (
         <div className="absolute inset-0 bg-surface-container-low" />

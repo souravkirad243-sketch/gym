@@ -6,8 +6,8 @@ export default function LegalPage({ title }) {
       <h1 className="font-display text-display-lg-mobile text-primary md:text-display-lg">{title}</h1>
       <div className="mt-8 max-w-3xl space-y-5 font-body text-body-md text-secondary">
         <p>This page provides placeholder policy content for the production React conversion. Replace it with approved legal copy before launch.</p>
-        <p>Lumina Salon uses submitted contact details only to respond to appointment, service, and career enquiries. We do not sell client information.</p>
-        <p>For questions about this policy, contact hello@luminaelevated.com.</p>
+        <p>AD Unisex Salon uses submitted contact details only to respond to appointment, service, and career enquiries. We do not sell client information.</p>
+        <p>For questions about this policy, contact hello@adunisexsalon.com.</p>
       </div>
     </main>
   );

@@ -31,7 +31,7 @@ export default function Home() {
           <div className="reveal-up">
             <h2 className="font-display text-headline-md text-primary">Our Sanctuary Story</h2>
             <div className="my-8 h-1 w-20 bg-primary-fixed-dim" />
-            <p className="mb-6 font-body text-body-lg text-secondary">Founded on holistic renewal, Lumina is more than a salon. It is a curated escape where time slows down and focus returns to the self.</p>
+            <p className="mb-6 font-body text-body-lg text-secondary">Founded on holistic renewal, AD Unisex Salon is more than a salon. It is a curated escape where time slows down and focus returns to the self.</p>
             <p className="mb-8 font-body text-body-md text-secondary/85">Every service is a bespoke ritual, combining world-class technique with botanical elements so you leave feeling revitalized inside and out.</p>
             <Link className="inline-flex items-center gap-3 font-body text-label-md uppercase tracking-widest text-primary transition-transform hover:translate-x-2" to="/about">
               Learn about our philosophy <span className="material-symbols-outlined">arrow_forward</span>
@@ -69,7 +69,7 @@ export default function Home() {
       <section className="bg-surface px-margin-mobile py-24 md:px-margin-desktop md:py-section-gap">
         <div className="mx-auto grid max-w-container-max grid-cols-1 items-center gap-16 lg:grid-cols-2">
           <div className="reveal-up">
-            <span className="font-body text-label-md uppercase tracking-widest text-primary-container">Voices of Lumina</span>
+            <span className="font-body text-label-md uppercase tracking-widest text-primary-container">Voices of AD Unisex Salon</span>
             <h2 className="mb-8 mt-2 font-display text-headline-md text-primary">Client Reflections</h2>
             <blockquote className="border-l-4 border-primary-fixed-dim pl-8">
               <p className="mb-5 font-display text-headline-sm italic text-secondary">"{active.quote}"</p>

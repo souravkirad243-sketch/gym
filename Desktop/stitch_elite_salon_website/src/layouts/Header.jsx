@@ -17,7 +17,7 @@ export default function Header() {
     <header className={`fixed top-0 z-50 w-full border-b border-secondary-container/30 bg-surface/85 backdrop-blur-md transition-shadow ${scrolled ? "shadow-md" : "shadow-sm"}`}>
       <nav className="mx-auto flex h-20 max-w-container-max items-center justify-between px-margin-mobile md:px-margin-desktop">
         <Link className="font-display text-headline-md italic text-primary focus-ring" to="/" onClick={() => setOpen(false)}>
-          Lumina Salon
+          AD Unisex Salon
         </Link>
         <div className="hidden items-center gap-9 md:flex">
           {navItems.map((item) => (

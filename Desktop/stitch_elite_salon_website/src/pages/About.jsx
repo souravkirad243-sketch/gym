@@ -10,7 +10,7 @@ export default function About() {
 
   return (
     <main>
-      <Hero eyebrow="Our Philosophy" title="The Elevated Sanctuary" text="Lumina was founded to create a space where beauty transcends the superficial and expert care restores calm." image={images.aboutHero} compact />
+      <Hero eyebrow="Our Philosophy" title="The Elevated Sanctuary" text="AD Unisex Salon was founded to create a space where beauty transcends the superficial and expert care restores calm." image={images.aboutHero} compact />
       <section className="mx-auto grid max-w-container-max grid-cols-1 items-center gap-16 px-margin-mobile py-24 md:grid-cols-2 md:px-margin-desktop md:py-section-gap">
         <div className="reveal-up space-y-7">
           <h2 className="font-display text-headline-md italic text-primary">Commitment to Excellence</h2>
@@ -51,7 +51,7 @@ export default function About() {
       </section>
       <section className="bg-primary px-margin-mobile py-24 text-on-primary md:px-margin-desktop md:py-section-gap">
         <div className="reveal-up mx-auto max-w-container-max">
-          <h2 className="font-display text-display-lg-mobile md:text-display-lg">The Lumina Promise</h2>
+          <h2 className="font-display text-display-lg-mobile md:text-display-lg">The AD Unisex Salon Promise</h2>
           <p className="mt-6 max-w-3xl font-body text-body-lg text-on-primary/80">Transparent pricing, continued education, and post-sanctuary care keep every visit precise, calm, and easy to maintain at home.</p>
           <LinkButton to="/book" className="mt-10 bg-secondary-fixed text-on-secondary-fixed hover:bg-secondary-fixed-dim">Experience the Difference</LinkButton>
         </div>

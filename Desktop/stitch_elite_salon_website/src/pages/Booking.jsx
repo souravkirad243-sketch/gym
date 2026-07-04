@@ -84,7 +84,7 @@ export default function Booking() {
             <div className="space-y-5 text-secondary">
               <p><span className="font-body text-label-md uppercase tracking-wider text-primary">Address</span><br />428 Ivory Lane, Suite 100<br />Chelsea, NY 10011</p>
               <p><span className="font-body text-label-md uppercase tracking-wider text-primary">Direct Line</span><br /><a href="tel:+12125550198">+1 (212) 555-0198</a></p>
-              <p><span className="font-body text-label-md uppercase tracking-wider text-primary">Enquiries</span><br /><a href="mailto:hello@luminaelevated.com">hello@luminaelevated.com</a></p>
+              <p><span className="font-body text-label-md uppercase tracking-wider text-primary">Enquiries</span><br /><a href="mailto:hello@adunisexsalon.com">hello@adunisexsalon.com</a></p>
             </div>
           </div>
           <div className="image-fill h-64 rounded-lg shadow-ambient" style={{ backgroundImage: `url("${images.bookingAccent}")` }} aria-label="Salon product display" />
