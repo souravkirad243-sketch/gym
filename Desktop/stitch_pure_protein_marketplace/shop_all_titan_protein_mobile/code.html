@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Hanken+Grotesk:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "background": "#111508",
+                    "outline": "#8e9379",
+                    "surface-container": "#1e2113",
+                    "secondary-container": "#d73b00",
+                    "on-tertiary-container": "#556774",
+                    "surface-container-highest": "#333627",
+                    "surface-container-high": "#282b1d",
+                    "inverse-primary": "#506600",
+                    "on-tertiary-fixed-variant": "#374956",
+                    "on-surface-variant": "#c4c9ac",
+                    "surface-container-low": "#1a1d10",
+                    "on-tertiary": "#21323e",
+                    "primary-container": "#c3f400",
+                    "primary": "#ffffff",
+                    "on-secondary-container": "#fffbff",
+                    "on-primary": "#283500",
+                    "on-error-container": "#ffdad6",
+                    "secondary-fixed": "#ffdbd1",
+                    "on-background": "#e2e4cf",
+                    "surface": "#111508",
+                    "on-primary-container": "#556d00",
+                    "on-error": "#690005",
+                    "secondary": "#ffb5a0",
+                    "on-primary-fixed-variant": "#3c4d00",
+                    "tertiary": "#ffffff",
+                    "primary-fixed-dim": "#abd600",
+                    "on-secondary-fixed-variant": "#862200",
+                    "surface-bright": "#373b2c",
+                    "tertiary-container": "#d2e5f5",
+                    "surface-variant": "#333627",
+                    "surface-container-lowest": "#0c0f04",
+                    "on-secondary-fixed": "#3b0900",
+                    "inverse-on-surface": "#2f3223",
+                    "surface-dim": "#111508",
+                    "on-primary-fixed": "#161e00",
+                    "on-tertiary-fixed": "#0b1d29",
+                    "tertiary-fixed": "#d2e5f5",
+                    "outline-variant": "#444933",
+                    "inverse-surface": "#e2e4cf",
+                    "error": "#ffb4ab",
+                    "primary-fixed": "#c3f400",
+                    "on-secondary": "#5f1500",
+                    "error-container": "#93000a",
+                    "surface-tint": "#abd600",
+                    "tertiary-fixed-dim": "#b6c9d8",
+                    "secondary-fixed-dim": "#ffb5a0",
+                    "on-surface": "#e2e4cf"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "gutter": "24px",
+                    "unit": "4px",
+                    "margin-mobile": "16px",
+                    "margin-desktop": "64px",
+                    "container-max": "1280px"
+            },
+            "fontFamily": {
+                    "headline-md": ["Anton"],
+                    "body-lg": ["Hanken Grotesk"],
+                    "headline-sm": ["Anton"],
+                    "label-bold": ["Hanken Grotesk"],
+                    "headline-xl-mobile": ["Anton"],
+                    "headline-xl": ["Anton"],
+                    "headline-lg": ["Anton"],
+                    "body-md": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                    "headline-md": ["32px", {"lineHeight": "36px", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "headline-sm": ["24px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "label-bold": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "700"}],
+                    "headline-xl-mobile": ["48px", {"lineHeight": "48px", "fontWeight": "400"}],
+                    "headline-xl": ["80px", {"lineHeight": "80px", "letterSpacing": "-0.02em", "fontWeight": "400"}],
+                    "headline-lg": ["48px", {"lineHeight": "48px", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .speed-gradient {
+            background: linear-gradient(135deg, #862200 0%, #d73b00 100%);
+        }
+        .accent-gradient {
+            background: linear-gradient(135deg, #abd600 0%, #c3f400 100%);
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .filter-drawer {
+            transform: translateX(-100%);
+            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .filter-drawer.open {
+            transform: translateX(0);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-background text-on-background font-body-md selection:bg-primary-fixed selection:text-on-primary-fixed overflow-x-hidden">
+<!-- TopNavBar -->
+<nav class="w-full top-0 sticky z-50 bg-background border-b border-outline-variant flex justify-between items-center px-4 py-4 md:px-margin-desktop max-w-container-max mx-auto">
+<div class="flex items-center gap-4">
+<button class="md:hidden text-on-surface" id="menu-toggle">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<span class="font-headline-lg-mobile text-headline-lg-mobile text-primary-fixed-dim tracking-tighter italic">TITAN PROTEIN</span>
+</div>
+<div class="hidden md:flex gap-8">
+<a class="font-label-bold text-label-bold text-primary-fixed-dim border-b-2 border-primary-fixed-dim pb-1" href="#">WHEY</a>
+<a class="font-label-bold text-label-bold text-on-surface hover:text-primary-fixed-dim transition-colors duration-200" href="#">PLANT</a>
+<a class="font-label-bold text-label-bold text-on-surface hover:text-primary-fixed-dim transition-colors duration-200" href="#">ABOUT</a>
+<a class="font-label-bold text-label-bold text-on-surface hover:text-primary-fixed-dim transition-colors duration-200" href="#">MISSION</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-primary-fixed-dim hover:bg-surface-container-highest p-2 transition-colors">shopping_cart</button>
+<button class="material-symbols-outlined text-primary-fixed-dim hover:bg-surface-container-highest p-2 transition-colors">person</button>
+</div>
+</nav>
+<!-- Mobile Filter Sidebar (Drawer) -->
+<div class="fixed inset-0 bg-black/60 z-[60] opacity-0 pointer-events-none transition-opacity duration-300" id="filter-overlay"></div>
+<aside class="filter-drawer fixed top-0 left-0 h-full w-4/5 max-w-xs bg-surface-container-low z-[70] p-6 flex flex-col gap-8 shadow-2xl" id="filter-drawer">
+<div class="flex justify-between items-center border-b border-outline-variant pb-4">
+<h2 class="font-headline-sm text-headline-sm text-primary">FILTERS</h2>
+<button class="material-symbols-outlined text-on-surface" id="close-filter">close</button>
+</div>
+<div class="space-y-8">
+<!-- Category -->
+<div>
+<h3 class="font-label-bold text-label-bold text-primary-fixed-dim mb-4 tracking-widest uppercase">Category</h3>
+<div class="flex flex-col gap-3">
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="w-5 h-5 border-2 border-outline-variant bg-transparent checked:bg-primary-fixed-dim checked:border-primary-fixed-dim focus:ring-0 rounded-none transition-all" type="checkbox"/>
+<span class="font-body-md text-on-surface-variant group-hover:text-primary transition-colors">Whey Isolate</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="w-5 h-5 border-2 border-outline-variant bg-transparent checked:bg-primary-fixed-dim checked:border-primary-fixed-dim focus:ring-0 rounded-none transition-all" type="checkbox"/>
+<span class="font-body-md text-on-surface-variant group-hover:text-primary transition-colors">Plant Protein</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="w-5 h-5 border-2 border-outline-variant bg-transparent checked:bg-primary-fixed-dim checked:border-primary-fixed-dim focus:ring-0 rounded-none transition-all" type="checkbox"/>
+<span class="font-body-md text-on-surface-variant group-hover:text-primary transition-colors">Pre-Workout</span>
+</label>
+</div>
+</div>
+<!-- Goal -->
+<div>
+<h3 class="font-label-bold text-label-bold text-primary-fixed-dim mb-4 tracking-widest uppercase">Your Goal</h3>
+<div class="grid grid-cols-2 gap-2">
+<button class="border border-outline-variant py-2 px-3 text-xs font-label-bold hover:border-primary-fixed-dim hover:text-primary-fixed-dim transition-all">BULK</button>
+<button class="border border-outline-variant py-2 px-3 text-xs font-label-bold hover:border-primary-fixed-dim hover:text-primary-fixed-dim transition-all">CUT</button>
+<button class="border border-outline-variant py-2 px-3 text-xs font-label-bold hover:border-primary-fixed-dim hover:text-primary-fixed-dim transition-all">ENDURANCE</button>
+<button class="border border-outline-variant py-2 px-3 text-xs font-label-bold hover:border-primary-fixed-dim hover:text-primary-fixed-dim transition-all">RECOVERY</button>
+</div>
+</div>
+<!-- Price Range -->
+<div>
+<h3 class="font-label-bold text-label-bold text-primary-fixed-dim mb-4 tracking-widest uppercase">Price Range</h3>
+<input class="w-full h-1 bg-surface-container-highest appearance-none cursor-pointer accent-primary-fixed-dim" max="150" min="0" type="range" value="75"/>
+<div class="flex justify-between mt-2 font-body-md text-on-surface-variant italic">
+<span>$0</span>
+<span>$150</span>
+</div>
+</div>
+</div>
+<button class="mt-auto w-full accent-gradient text-on-primary py-4 font-headline-sm uppercase tracking-tighter active:scale-95 transition-transform">Apply Filters</button>
+</aside>
+<main class="min-h-screen">
+<!-- Hero Header -->
+<header class="relative py-12 px-4 overflow-hidden">
+
+<div class="relative z-10 max-w-container-max mx-auto">
+<h1 class="font-headline-xl-mobile text-headline-xl-mobile leading-none uppercase tracking-tighter italic">Engineered<br/><span class="text-primary-fixed-dim">Fuel</span></h1>
+<p class="mt-4 font-body-lg text-body-lg text-on-surface-variant max-w-sm">No fillers. Just results. Professional grade supplementation for those who don't compromise.</p>
+</div>
+</header>
+<!-- Utility Bar -->
+<section class="sticky top-[73px] z-40 bg-background border-y border-outline-variant px-4 py-3 flex justify-between items-center">
+<button class="flex items-center gap-2 font-label-bold text-label-bold text-primary-fixed-dim hover:opacity-80 transition-opacity" id="open-filter">
+<span class="material-symbols-outlined">tune</span>
+                FILTERS
+            </button>
+<div class="flex items-center gap-4">
+<span class="text-xs text-on-surface-variant italic">12 PRODUCTS FOUND</span>
+<select class="bg-transparent border-none text-xs font-label-bold text-on-surface focus:ring-0 uppercase pr-8">
+<option>NEWEST</option>
+<option>PRICE: LOW-HIGH</option>
+<option>PRICE: HIGH-LOW</option>
+</select>
+</div>
+</section>
+<!-- Product Grid -->
+<section class="px-4 py-8 max-w-container-max mx-auto">
+<div class="grid grid-cols-2 gap-gutter">
+<!-- Product Card 1 -->
+<div class="flex flex-col bg-surface-container-low border border-outline-variant group">
+<div class="relative aspect-[3/4] bg-surface-container-highest overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A high-contrast studio photograph of a premium black protein tub with glowing electric lime accents. The lighting is dramatic, highlighting the sleek matte texture of the packaging against a dark, gritty concrete background. Sharp shadows and crisp reflections emphasize a professional, athletic aesthetic consistent with high-end sports nutrition branding." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCh8rOP8-FNWvI5WZ2QkNjLxE_BDLx6ZAlH7Yw1sOmJD92BtV8hiK6C71tRe2I2UB1fzLm41E1kA8Sj65j9DQ4VT7Ctu9WpE0SriUOJdOXN0r-IvdUOpnffpC1iSELPFwem-rzwBSiusHBW1vr8OtRtmcYWiubkqy-Uk5Dr4fLaxIbIljdSwE2cCnNCQJYa_TksK0SVOWSmUv7vrlcu-Q-LfC3QaIlrfREfyKYCDloP0KkwdhaoD7U4"/>
+<span class="absolute top-0 right-0 speed-gradient px-3 py-1 font-label-bold text-[10px] text-on-secondary-container tracking-widest uppercase">Best Seller</span>
+</div>
+<div class="p-4 flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-1">
+<span class="text-[10px] font-label-bold text-secondary-container tracking-widest">WHEY ISOLATE</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface leading-tight mb-2">TITAN ISOLATE V2</h3>
+<div class="flex items-center gap-1 mb-4">
+<div class="h-1 flex-grow bg-surface-container-highest overflow-hidden">
+<div class="h-full w-4/5 accent-gradient"></div>
+</div>
+<span class="text-[10px] font-label-bold text-on-surface-variant">25G PRO</span>
+</div>
+<div class="mt-auto">
+<p class="font-headline-sm text-headline-sm text-primary mb-4">$54.99</p>
+<button class="w-full accent-gradient text-on-primary font-label-bold py-3 uppercase tracking-widest group-hover:shadow-[0_0_15px_rgba(195,244,0,0.3)] transition-all active:scale-95">Add To Cart</button>
+</div>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="flex flex-col bg-surface-container-low border border-outline-variant group">
+<div class="relative aspect-[3/4] bg-surface-container-highest overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A close-up studio shot of a dark charcoal protein supplement container labeled 'TITAN PLANT'. The image features intense, high-key lighting from the side, revealing subtle metallic details on the label. The background is a dark, moody grey with a slight hint of smoke or dust, evoking a gritty, serious training atmosphere. The primary colors are deep blacks and vibrant electric lime." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBS6l2A5jFrqwYniVQkSX1T0M-0E7U9WmC-MT16f7DjZUd_wXFOsaCNK07VFMoDe4XmqpI6Mqvo0N8nweJk5ip_cniS51pXY4cIgFNlG9iGqA_U8_6yitxHzmFkh6he0griY8ycAwVoplDjxh2eNZc-gC0FaQ2h3yuHjeyrPnaLpzE427LxTEX7mXirbdLRXxOHW_AbgOY4mvuqqYgqbtikrVlk5M60AIUftSsMDRbcw6zL2MOZqW9V"/>
+</div>
+<div class="p-4 flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-1">
+<span class="text-[10px] font-label-bold text-secondary-container tracking-widest">PLANT BASED</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface leading-tight mb-2">EARTH TITAN</h3>
+<div class="flex items-center gap-1 mb-4">
+<div class="h-1 flex-grow bg-surface-container-highest overflow-hidden">
+<div class="h-full w-3/5 accent-gradient"></div>
+</div>
+<span class="text-[10px] font-label-bold text-on-surface-variant">22G PRO</span>
+</div>
+<div class="mt-auto">
+<p class="font-headline-sm text-headline-sm text-primary mb-4">$49.99</p>
+<button class="w-full border border-primary-fixed-dim text-primary-fixed-dim font-label-bold py-3 uppercase tracking-widest hover:bg-primary-fixed-dim hover:text-on-primary transition-all active:scale-95">Add To Cart</button>
+</div>
+</div>
+</div>
+<!-- Product Card 3 -->
+<div class="flex flex-col bg-surface-container-low border border-outline-variant group">
+<div class="relative aspect-[3/4] bg-surface-container-highest overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Dramatically lit protein supplement packaging in a dark gym environment. The container is a bold matte black with glossy electric lime typography that pops under a single overhead spotlight. Texture of sweat and effort is implied through the moody, high-contrast photography style. The scene is clean, minimal, and intensely performance-focused." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDC0mLZING475faDWZSk9wmmbn0qDfJGFVztOrRx47CxM5wZYd1Xogib8N9yIvZhARYaYuL4Ms2un4XWmjXfvL8wPLaaVN11PUN0gSVp_i8Eh186WV08wSlJK_R6rQ9-rNa0xt8VaVxTALTL5Br69Oo8azwIbnGFSZ1JYsU9J8RbXizEnMwZc0BlZJdaDJkrw7mq69q7YTP1RBiGyrmBfXA46C1BXNAGpUYU1I23LeHDo2a_-3SQlC4"/>
+<span class="absolute top-0 right-0 bg-on-tertiary-container px-3 py-1 font-label-bold text-[10px] text-on-tertiary tracking-widest uppercase">Limited</span>
+</div>
+<div class="p-4 flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-1">
+<span class="text-[10px] font-label-bold text-secondary-container tracking-widest">PRE-WORKOUT</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface leading-tight mb-2">HYPER-DRIVE X</h3>
+<div class="flex items-center gap-1 mb-4">
+<div class="h-1 flex-grow bg-surface-container-highest overflow-hidden">
+<div class="h-full w-full accent-gradient"></div>
+</div>
+<span class="text-[10px] font-label-bold text-on-surface-variant">MAX FLOW</span>
+</div>
+<div class="mt-auto">
+<p class="font-headline-sm text-headline-sm text-primary mb-4">$44.99</p>
+<button class="w-full accent-gradient text-on-primary font-label-bold py-3 uppercase tracking-widest group-hover:shadow-[0_0_15px_rgba(195,244,0,0.3)] transition-all active:scale-95">Add To Cart</button>
+</div>
+</div>
+</div>
+<!-- Product Card 4 -->
+<div class="flex flex-col bg-surface-container-low border border-outline-variant group">
+<div class="relative aspect-[3/4] bg-surface-container-highest overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Professional sports supplement photography of a sleek, heavy-duty black tub on a dark platform. The label glows with vibrant orange and electric lime highlights, showcasing technical macro data in a brutalist typography style. The background features crushed blacks and a hint of industrial steel, emphasizing strength, engineering, and elite performance." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAGw7EuuZfraDClUkPvrB2ng-yyZcqeRvkmQrSOvwHM-YepDEURwsiVolOz9NQdDzKN0egl4M4-9Yn1EoknDBQ1th014kg5LLMuPfA1hYuNHtvaaHY-zAMwBwqSFKVMBq23pJJ1iOHrj-LU2HIHPecG1s6sqB99-oH6FiB8IvaGV22RJvn0sEWFuzzghUd2z2vHusFcFdt_f9Tz3ULsHkuLw3sW1rShN2ZFDYfjIGfzSzP8Ja-yBHIl"/>
+</div>
+<div class="p-4 flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-1">
+<span class="text-[10px] font-label-bold text-secondary-container tracking-widest">WHEY BLEND</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface leading-tight mb-2">TITAN MATRIX</h3>
+<div class="flex items-center gap-1 mb-4">
+<div class="h-1 flex-grow bg-surface-container-highest overflow-hidden">
+<div class="h-full w-3/4 accent-gradient"></div>
+</div>
+<span class="text-[10px] font-label-bold text-on-surface-variant">24G PRO</span>
+</div>
+<div class="mt-auto">
+<p class="font-headline-sm text-headline-sm text-primary mb-4">$52.99</p>
+<button class="w-full accent-gradient text-on-primary font-label-bold py-3 uppercase tracking-widest group-hover:shadow-[0_0_15px_rgba(195,244,0,0.3)] transition-all active:scale-95">Add To Cart</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Technical Specs / Trust Bar -->
+<section class="py-12 bg-surface-container-high border-y border-outline-variant overflow-hidden">
+<div class="flex animate-scroll whitespace-nowrap gap-12">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary-fixed-dim">verified</span>
+<span class="font-headline-sm text-headline-sm text-on-surface opacity-80 uppercase tracking-tighter italic">Lab Tested</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary-fixed-dim">bolt</span>
+<span class="font-headline-sm text-headline-sm text-on-surface opacity-80 uppercase tracking-tighter italic">Pure Energy</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary-fixed-dim">precision_manufacturing</span>
+<span class="font-headline-sm text-headline-sm text-on-surface opacity-80 uppercase tracking-tighter italic">Zero Fillers</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary-fixed-dim">rocket_launch</span>
+<span class="font-headline-sm text-headline-sm text-on-surface opacity-80 uppercase tracking-tighter italic">Fast Shipping</span>
+</div>
+<!-- Duplicate for seamless scroll -->
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary-fixed-dim">verified</span>
+<span class="font-headline-sm text-headline-sm text-on-surface opacity-80 uppercase tracking-tighter italic">Lab Tested</span>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full bg-surface-dim border-t border-outline-variant px-margin-mobile py-12 max-w-container-max mx-auto gap-gutter flex flex-col md:flex-row justify-between items-center text-center md:text-left">
+<div class="flex flex-col gap-4">
+<span class="font-headline-md text-headline-md text-primary-fixed-dim italic">TITAN PROTEIN</span>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xs">Fueling the next generation of titans. No excuses, only results.</p>
+</div>
+<div class="flex flex-wrap justify-center md:justify-end gap-6 my-8 md:my-0">
+<a class="font-label-bold text-label-bold text-on-surface-variant hover:text-primary-fixed-dim hover:underline decoration-primary-fixed-dim underline-offset-4" href="#">PRIVACY</a>
+<a class="font-label-bold text-label-bold text-on-surface-variant hover:text-primary-fixed-dim hover:underline decoration-primary-fixed-dim underline-offset-4" href="#">TERMS</a>
+<a class="font-label-bold text-label-bold text-on-surface-variant hover:text-primary-fixed-dim hover:underline decoration-primary-fixed-dim underline-offset-4" href="#">LAB TESTS</a>
+<a class="font-label-bold text-label-bold text-on-surface-variant hover:text-primary-fixed-dim hover:underline decoration-primary-fixed-dim underline-offset-4" href="#">WHOLESALE</a>
+<a class="font-label-bold text-label-bold text-on-surface-variant hover:text-primary-fixed-dim hover:underline decoration-primary-fixed-dim underline-offset-4" href="#">CONTACT</a>
+</div>
+<div class="w-full md:w-auto text-center md:text-right">
+<p class="font-label-bold text-label-bold text-on-surface-variant opacity-80">© 2024 TITAN PROTEIN. ENGINEERED FOR PERFORMANCE.</p>
+</div>
+</footer>
+<script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const openFilter = document.getElementById('open-filter');
+        const closeFilter = document.getElementById('close-filter');
+        const filterDrawer = document.getElementById('filter-drawer');
+        const filterOverlay = document.getElementById('filter-overlay');
+
+        function toggleDrawer() {
+            filterDrawer.classList.toggle('open');
+            filterOverlay.classList.toggle('opacity-100');
+            filterOverlay.classList.toggle('pointer-events-auto');
+            document.body.classList.toggle('overflow-hidden');
+        }
+
+        openFilter.addEventListener('click', toggleDrawer);
+        closeFilter.addEventListener('click', toggleDrawer);
+        filterOverlay.addEventListener('click', toggleDrawer);
+        menuToggle.addEventListener('click', toggleDrawer);
+
+        // Add to cart micro-interaction
+        document.querySelectorAll('button').forEach(btn => {
+            if(btn.innerText.includes('Add To Cart')) {
+                btn.addEventListener('click', function() {
+                    const originalText = this.innerText;
+                    this.innerText = 'ADDED';
+                    this.classList.add('scale-95');
+                    setTimeout(() => {
+                        this.innerText = originalText;
+                        this.classList.remove('scale-95');
+                    }, 1000);
+                });
+            }
+        });
+    </script>
+<style>
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .animate-scroll {
+            animation: scroll 20s linear infinite;
+        }
+    </style>
+</body></html>

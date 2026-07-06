@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Hanken+Grotesk:wght@400;700&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Anton:wght@100..900&family=Hanken+Grotesk:wght@100..900&display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "background": "#111508",
+                    "outline": "#8e9379",
+                    "surface-container": "#1e2113",
+                    "secondary-container": "#d73b00",
+                    "on-tertiary-container": "#556774",
+                    "surface-container-highest": "#333627",
+                    "surface-container-high": "#282b1d",
+                    "inverse-primary": "#506600",
+                    "on-tertiary-fixed-variant": "#374956",
+                    "on-surface-variant": "#c4c9ac",
+                    "surface-container-low": "#1a1d10",
+                    "on-tertiary": "#21323e",
+                    "primary-container": "#c3f400",
+                    "primary": "#ffffff",
+                    "on-secondary-container": "#fffbff",
+                    "on-primary": "#283500",
+                    "on-error-container": "#ffdad6",
+                    "secondary-fixed": "#ffdbd1",
+                    "on-background": "#e2e4cf",
+                    "surface": "#111508",
+                    "on-primary-container": "#556d00",
+                    "on-error": "#690005",
+                    "secondary": "#ffb5a0",
+                    "on-primary-fixed-variant": "#3c4d00",
+                    "tertiary": "#ffffff",
+                    "primary-fixed-dim": "#abd600",
+                    "on-secondary-fixed-variant": "#862200",
+                    "surface-bright": "#373b2c",
+                    "tertiary-container": "#d2e5f5",
+                    "surface-variant": "#333627",
+                    "surface-container-lowest": "#0c0f04",
+                    "on-secondary-fixed": "#3b0900",
+                    "inverse-on-surface": "#2f3223",
+                    "surface-dim": "#111508",
+                    "on-primary-fixed": "#161e00",
+                    "on-tertiary-fixed": "#0b1d29",
+                    "tertiary-fixed": "#d2e5f5",
+                    "outline-variant": "#444933",
+                    "inverse-surface": "#e2e4cf",
+                    "error": "#ffb4ab",
+                    "primary-fixed": "#c3f400",
+                    "on-secondary": "#5f1500",
+                    "error-container": "#93000a",
+                    "surface-tint": "#abd600",
+                    "tertiary-fixed-dim": "#b6c9d8",
+                    "secondary-fixed-dim": "#ffb5a0",
+                    "on-surface": "#e2e4cf"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "gutter": "24px",
+                    "unit": "4px",
+                    "margin-mobile": "16px",
+                    "margin-desktop": "64px",
+                    "container-max": "1280px"
+            },
+            "fontFamily": {
+                    "headline-md": ["Anton"],
+                    "body-lg": ["Hanken Grotesk"],
+                    "headline-sm": ["Anton"],
+                    "label-bold": ["Hanken Grotesk"],
+                    "headline-xl-mobile": ["Anton"],
+                    "headline-xl": ["Anton"],
+                    "headline-lg": ["Anton"],
+                    "body-md": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                    "headline-md": ["32px", {"lineHeight": "36px", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "headline-sm": ["24px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "label-bold": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "700"}],
+                    "headline-xl-mobile": ["48px", {"lineHeight": "48px", "fontWeight": "400"}],
+                    "headline-xl": ["80px", {"lineHeight": "80px", "letterSpacing": "-0.02em", "fontWeight": "400"}],
+                    "headline-lg": ["48px", {"lineHeight": "48px", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            line-height: 1;
+            text-transform: none;
+            letter-spacing: normal;
+            word-wrap: normal;
+            white-space: nowrap;
+            direction: ltr;
+        }
+        .speed-gradient {
+            background: linear-gradient(135deg, #abd600 0%, #c3f400 100%);
+        }
+        .neon-glow:hover {
+            box-shadow: 0 0 15px rgba(171, 214, 0, 0.3);
+        }
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+        .active-nav-underline {
+            border-bottom: 2px solid #abd600;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body-md min-h-screen flex flex-col overflow-x-hidden">
+<!-- Top Navigation Shell -->
+<nav class="w-full top-0 sticky z-50 bg-background border-b border-outline-variant">
+<div class="flex justify-between items-center w-full px-margin-mobile py-4 max-w-container-max mx-auto">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary-fixed-dim">arrow_back</span>
+<h1 class="font-headline-lg text-headline-lg text-primary-fixed-dim tracking-tighter italic leading-none">TITAN PROTEIN</h1>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary-fixed-dim" data-icon="shopping_cart">shopping_cart</span>
+</div>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="flex-grow px-margin-mobile py-6 flex flex-col gap-8 pb-32">
+<!-- Page Header -->
+<section>
+<h2 class="font-headline-md text-headline-md text-primary-fixed-dim uppercase tracking-tight">YOUR ARSENAL</h2>
+<p class="font-body-md text-on-surface-variant">3 ITEMS PREPPED FOR PERFORMANCE</p>
+</section>
+<!-- Cart Items List -->
+<section class="flex flex-col gap-4">
+<!-- Item 1 -->
+<div class="bg-surface-container-low border border-outline-variant p-4 flex gap-4 items-center">
+<div class="w-24 h-24 bg-surface-container-highest flex-shrink-0 relative overflow-hidden border border-outline-variant">
+<img class="w-full h-full object-cover" data-alt="A high-contrast professional photograph of a matte black protein supplement tub with vibrant lime green branding. The tub is placed on a textured dark slate surface under dramatic studio lighting that emphasizes its hard edges and aggressive aesthetic. The lighting is high-key with deep shadows, fitting a dark brutalist fitness shop theme." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAq-546C4pzeC0QAfO-nsOvr7a_3FRPQffF4By5sVUyhAE4Camuy63_fQ0_RfrmHq5CCsiXkE11477V6_ys8Ubyd8ryug3rbMh9iRKG30uWAzdBd09rWpgUE-X-eYkT08S55BoGOCOY8Y2CByIKRRHBKRvJwyL0_tnS1z77986gar9t2Spf3-fphdtwzi9fpsTmoZq24BtSY2bFs7QaMstLcV2J0AtZRJw718xjV1-yVIHFuxi5LzLu"/>
+<div class="absolute top-0 right-0 bg-secondary-container text-on-secondary-container px-2 py-0.5 font-label-bold text-[10px]">WHEY</div>
+</div>
+<div class="flex-grow">
+<div class="flex justify-between items-start">
+<h3 class="font-headline-sm text-headline-sm leading-tight text-primary italic uppercase">TITAN ISOLATE</h3>
+<span class="material-symbols-outlined text-on-surface-variant text-sm cursor-pointer">close</span>
+</div>
+<p class="font-label-bold text-on-surface-variant text-xs mb-2">CHOCOLATE FURY | 2.5KG</p>
+<div class="flex justify-between items-center mt-4">
+<div class="flex items-center border border-outline-variant bg-surface-container-highest">
+<button class="px-3 py-1 text-primary-fixed-dim hover:bg-outline-variant transition-colors">-</button>
+<input class="w-10 bg-transparent border-none text-center font-label-bold text-primary focus:ring-0 p-0" type="number" value="1"/>
+<button class="px-3 py-1 text-primary-fixed-dim hover:bg-outline-variant transition-colors">+</button>
+</div>
+<span class="font-headline-sm text-headline-sm text-primary">$74.99</span>
+</div>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="bg-surface-container-low border border-outline-variant p-4 flex gap-4 items-center">
+<div class="w-24 h-24 bg-surface-container-highest flex-shrink-0 relative overflow-hidden border border-outline-variant">
+<img class="w-full h-full object-cover" data-alt="A sleek black shaker bottle with an electric lime green cap, captured in a high-speed motion shot with water droplets flying. The style is brutalist and high-energy, with heavy contrast and a dark charcoal background. The product looks engineered for professional athletes, emphasizing durability and grit." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAeFNoLtgLj2G59JPXIHkALqWaHCgtCFH64abWExL923AaVXTyujpaJKFaZlZr4mHQG4fZc3rPFVla36uwSBFsf6rQujRXaBfpt2gAqdApRSSbDACds8oTOuC9ITFOYRk6-GRhFxVbbBNOxOzo1YJWLF-Mc-LZzv1UtI3hJHIY2Djqa5sVDpzH29-wPbcF0JsP-HWiu2f3WDyqGRhn7UtHhdiXraFo6QoDxAIA4CuL_qycyO1odPDfq"/>
+</div>
+<div class="flex-grow">
+<div class="flex justify-between items-start">
+<h3 class="font-headline-sm text-headline-sm leading-tight text-primary italic uppercase">ELITE SHAKER</h3>
+<span class="material-symbols-outlined text-on-surface-variant text-sm cursor-pointer">close</span>
+</div>
+<p class="font-label-bold text-on-surface-variant text-xs mb-2">MATTE BLACK | 700ML</p>
+<div class="flex justify-between items-center mt-4">
+<div class="flex items-center border border-outline-variant bg-surface-container-highest">
+<button class="px-3 py-1 text-primary-fixed-dim hover:bg-outline-variant transition-colors">-</button>
+<input class="w-10 bg-transparent border-none text-center font-label-bold text-primary focus:ring-0 p-0" type="number" value="1"/>
+<button class="px-3 py-1 text-primary-fixed-dim hover:bg-outline-variant transition-colors">+</button>
+</div>
+<span class="font-headline-sm text-headline-sm text-primary">$15.00</span>
+</div>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="bg-surface-container-low border border-outline-variant p-4 flex gap-4 items-center">
+<div class="w-24 h-24 bg-surface-container-highest flex-shrink-0 relative overflow-hidden border border-outline-variant">
+<img class="w-full h-full object-cover" data-alt="Close-up of a premium pre-workout tub in a dark metallic finish with neon orange accents. The lighting is dramatic and moody, reflecting off the metallic surface. The image highlights the technical and 'engineered' nature of the supplement, set against a dark, gritty gym-inspired background with high-contrast muscle textures." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBAB62NB255eKQ7h4tE0IdCXsG5frH5TRD7KesjJKg8VDnbgestrQIzOo6cJ3JEJ0xdN7GhqaHqVsMLZZD0LpQiX25VgtcVwULhbeHdyPwZzoqF4OtLuBQu91b3HdZaCaXBvbjEwwpcS_0NHNMVmgfU1AETDYSzA7qdBpcmiMQuuntyQ5sxE80mymrFidb1yNxdeVwELRjuUqSQskdrwCwOSdgR6uEyVkOD6mjxdWJaAj4OhiHaglQr"/>
+<div class="absolute top-0 right-0 bg-secondary-container text-on-secondary-container px-2 py-0.5 font-label-bold text-[10px]">ENERGY</div>
+</div>
+<div class="flex-grow">
+<div class="flex justify-between items-start">
+<h3 class="font-headline-sm text-headline-sm leading-tight text-primary italic uppercase">VOLTAGE PRE</h3>
+<span class="material-symbols-outlined text-on-surface-variant text-sm cursor-pointer">close</span>
+</div>
+<p class="font-label-bold text-on-surface-variant text-xs mb-2">SOUR BOLT | 30 SERVINGS</p>
+<div class="flex justify-between items-center mt-4">
+<div class="flex items-center border border-outline-variant bg-surface-container-highest">
+<button class="px-3 py-1 text-primary-fixed-dim hover:bg-outline-variant transition-colors">-</button>
+<input class="w-10 bg-transparent border-none text-center font-label-bold text-primary focus:ring-0 p-0" type="number" value="2"/>
+<button class="px-3 py-1 text-primary-fixed-dim hover:bg-outline-variant transition-colors">+</button>
+</div>
+<span class="font-headline-sm text-headline-sm text-primary">$89.98</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Macro Overview Section -->
+<section class="flex flex-col gap-4">
+<h3 class="font-headline-sm text-headline-sm text-primary-fixed-dim uppercase italic border-l-4 border-primary-fixed-dim pl-3">ORDER NUTRITION PROFILE</h3>
+<div class="bg-surface-container-high border border-outline-variant p-6 flex flex-col gap-6">
+<!-- Protein Bar -->
+<div>
+<div class="flex justify-between items-end mb-2">
+<span class="font-label-bold text-primary uppercase">PROTEIN</span>
+<span class="font-label-bold text-primary-fixed-dim">120G</span>
+</div>
+<div class="w-full h-3 bg-surface-container-highest border border-outline-variant">
+<div class="h-full speed-gradient" style="width: 85%"></div>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-gutter">
+<!-- Carbs -->
+<div>
+<div class="flex justify-between items-end mb-2">
+<span class="font-label-bold text-primary uppercase text-xs">CARBS</span>
+<span class="font-label-bold text-on-surface-variant text-xs">12G</span>
+</div>
+<div class="w-full h-2 bg-surface-container-highest border border-outline-variant">
+<div class="h-full bg-secondary" style="width: 20%"></div>
+</div>
+</div>
+<!-- Fats -->
+<div>
+<div class="flex justify-between items-end mb-2">
+<span class="font-label-bold text-primary uppercase text-xs">FATS</span>
+<span class="font-label-bold text-on-surface-variant text-xs">4G</span>
+</div>
+<div class="w-full h-2 bg-surface-container-highest border border-outline-variant">
+<div class="h-full bg-on-tertiary-container" style="width: 10%"></div>
+</div>
+</div>
+</div>
+<div class="border-t border-outline-variant pt-4 flex flex-col gap-2">
+<div class="flex justify-between font-label-bold text-on-surface-variant">
+<span>SUBTOTAL</span>
+<span>$179.97</span>
+</div>
+<div class="flex justify-between font-label-bold text-on-surface-variant">
+<span>SHIPPING (ELITE)</span>
+<span class="text-primary-fixed-dim">FREE</span>
+</div>
+<div class="flex justify-between font-headline-sm text-headline-sm text-primary mt-2">
+<span>TOTAL</span>
+<span>$179.97</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Upsell Recommendation -->
+<section class="bg-primary-container p-6 border border-primary-fixed-dim flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-primary uppercase leading-tight italic">BOOST RECOVERY</span>
+<span class="font-body-md text-on-primary-container">Add Creatine Monohydrate for only $19.99</span>
+</div>
+<button class="bg-on-primary text-primary-fixed px-4 py-2 font-label-bold uppercase neon-glow transition-all active:scale-95">ADD</button>
+</section>
+</main>
+<!-- Sticky Checkout Bar -->
+<div class="fixed bottom-0 left-0 w-full bg-surface-container p-margin-mobile border-t border-outline-variant z-50">
+<button class="w-full speed-gradient py-5 text-on-primary font-headline-sm text-headline-sm uppercase italic tracking-widest neon-glow active:scale-[0.98] transition-transform flex items-center justify-center gap-3">
+            PROCEED TO CHECKOUT
+            <span class="material-symbols-outlined font-bold">arrow_forward</span>
+</button>
+</div>
+<!-- Footer Space Holder -->
+<footer class="bg-surface-dim border-t border-outline-variant mt-auto">
+<div class="flex flex-col items-center w-full px-margin-mobile py-12 gap-gutter text-center">
+<h4 class="font-headline-md text-headline-md text-primary-fixed-dim italic">TITAN PROTEIN</h4>
+<div class="flex flex-wrap justify-center gap-4">
+<a class="font-label-bold text-on-surface-variant hover:text-primary-fixed-dim text-xs" href="#">PRIVACY</a>
+<a class="font-label-bold text-on-surface-variant hover:text-primary-fixed-dim text-xs" href="#">TERMS</a>
+<a class="font-label-bold text-on-surface-variant hover:text-primary-fixed-dim text-xs" href="#">CONTACT</a>
+</div>
+<p class="font-body-md text-[10px] text-on-surface-variant opacity-60">© 2024 TITAN PROTEIN. ENGINEERED FOR PERFORMANCE.</p>
+</div>
+</footer>
+<script>
+        // Simple Interaction Logic for Quantity Adjusters
+        document.querySelectorAll('button').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                const isPlus = e.target.innerText === '+';
+                const isMinus = e.target.innerText === '-';
+                if (isPlus || isMinus) {
+                    const input = e.target.parentElement.querySelector('input');
+                    let val = parseInt(input.value);
+                    if (isPlus) input.value = val + 1;
+                    if (isMinus && val > 1) input.value = val - 1;
+                }
+            });
+        });
+    </script>
+</body></html>

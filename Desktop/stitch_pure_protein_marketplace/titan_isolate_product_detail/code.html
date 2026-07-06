@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>TITAN ISOLATE - 100% WHEY | TITAN PROTEIN</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Hanken+Grotesk:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .speed-gradient {
+            background: linear-gradient(135deg, #8ba800 0%, #abd600 100%);
+        }
+        .glow-hover:hover {
+            box-shadow: 0 0 20px rgba(171, 214, 0, 0.3);
+        }
+        /* Custom Scrollbar for brutalist look */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #111508; }
+        ::-webkit-scrollbar-thumb { background: #333627; }
+        ::-webkit-scrollbar-thumb:hover { background: #abd600; }
+    </style>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary-fixed-dim": "#abd600",
+                    "inverse-on-surface": "#2f3223",
+                    "on-surface-variant": "#c4c9ac",
+                    "on-tertiary": "#21323e",
+                    "on-error-container": "#ffdad6",
+                    "tertiary-container": "#d2e5f5",
+                    "inverse-primary": "#506600",
+                    "on-surface": "#e2e4cf",
+                    "secondary-fixed-dim": "#ffb5a0",
+                    "surface-bright": "#373b2c",
+                    "on-error": "#690005",
+                    "on-primary-fixed-variant": "#3c4d00",
+                    "surface-container-highest": "#333627",
+                    "outline-variant": "#444933",
+                    "surface-dim": "#111508",
+                    "primary-container": "#c3f400",
+                    "on-primary": "#283500",
+                    "error-container": "#93000a",
+                    "error": "#ffb4ab",
+                    "on-tertiary-fixed": "#0b1d29",
+                    "surface-container-lowest": "#0c0f04",
+                    "surface-variant": "#333627",
+                    "secondary-fixed": "#ffdbd1",
+                    "outline": "#8e9379",
+                    "secondary": "#ffb5a0",
+                    "primary": "#ffffff",
+                    "on-secondary-fixed-variant": "#862200",
+                    "on-primary-fixed": "#161e00",
+                    "surface-tint": "#abd600",
+                    "surface-container": "#1e2113",
+                    "on-tertiary-container": "#556774",
+                    "primary-fixed": "#c3f400",
+                    "on-secondary-fixed": "#3b0900",
+                    "on-primary-container": "#556d00",
+                    "inverse-surface": "#e2e4cf",
+                    "secondary-container": "#d73b00",
+                    "tertiary-fixed": "#d2e5f5",
+                    "on-background": "#e2e4cf",
+                    "on-secondary": "#5f1500",
+                    "surface-container-low": "#1a1d10",
+                    "background": "#111508",
+                    "on-secondary-container": "#fffbff",
+                    "tertiary": "#ffffff",
+                    "tertiary-fixed-dim": "#b6c9d8",
+                    "surface-container-high": "#282b1d",
+                    "on-tertiary-fixed-variant": "#374956",
+                    "surface": "#111508"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "margin-desktop": "64px",
+                    "container-max": "1280px",
+                    "margin-mobile": "16px",
+                    "gutter": "24px",
+                    "unit": "4px"
+            },
+            "fontFamily": {
+                    "body-lg": ["Hanken Grotesk"],
+                    "body-md": ["Hanken Grotesk"],
+                    "headline-sm": ["Anton"],
+                    "headline-lg": ["Anton"],
+                    "headline-xl": ["Anton"],
+                    "label-bold": ["Hanken Grotesk"],
+                    "headline-md": ["Anton"],
+                    "headline-xl-mobile": ["Anton"]
+            },
+            "fontSize": {
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "headline-sm": ["24px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "headline-lg": ["48px", {"lineHeight": "48px", "fontWeight": "400"}],
+                    "headline-xl": ["80px", {"lineHeight": "80px", "letterSpacing": "-0.02em", "fontWeight": "400"}],
+                    "label-bold": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "700"}],
+                    "headline-md": ["32px", {"lineHeight": "36px", "fontWeight": "400"}],
+                    "headline-xl-mobile": ["48px", {"lineHeight": "48px", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+</head>
+<body class="bg-background text-on-surface font-body-md overflow-x-hidden">
+<!-- Top Navigation Bar -->
+<header class="w-full top-0 sticky z-50 bg-background border-b border-outline-variant">
+<nav class="flex justify-between items-center w-full px-margin-desktop py-4 max-w-container-max mx-auto">
+<div class="flex items-center gap-12">
+<a class="font-headline-lg text-headline-lg text-primary-fixed-dim tracking-tighter italic" href="#">TITAN PROTEIN</a>
+<div class="hidden md:flex gap-8">
+<a class="text-primary-fixed-dim border-b-2 border-primary-fixed-dim pb-1 font-label-bold text-label-bold" href="#">WHEY</a>
+<a class="text-on-surface hover:text-primary-fixed-dim transition-colors duration-200 font-label-bold text-label-bold" href="#">PLANT</a>
+<a class="text-on-surface hover:text-primary-fixed-dim transition-colors duration-200 font-label-bold text-label-bold" href="#">ABOUT</a>
+<a class="text-on-surface hover:text-primary-fixed-dim transition-colors duration-200 font-label-bold text-label-bold" href="#">MISSION</a>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<button class="material-symbols-outlined text-on-surface hover:text-primary-fixed-dim transition-colors">person</button>
+<button class="material-symbols-outlined text-on-surface hover:text-primary-fixed-dim transition-colors">shopping_cart</button>
+</div>
+</nav>
+</header>
+<main class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-12">
+<!-- Product Hero Section (Bento Style Layout) -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-start">
+<!-- Gallery Column -->
+<div class="md:col-span-7 flex flex-col gap-gutter">
+<div class="relative group aspect-square bg-surface-container overflow-hidden border border-outline-variant">
+<img class="w-full h-full object-cover" data-alt="A massive black tub of Titan Isolate Whey protein powder positioned centrally against a dark, moody gym backdrop with sharp high-key lighting highlighting its texture. The lighting is aggressive and high-contrast, emphasizing the grit and performance focus of the brand. Electric lime green light leaks subtly frame the product. Professional sports photography style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNyi4G6X19Eoyw7UN8LZvrSkYrP6eDSmXnipJP7UrpeFHP6kDFNRO4ArMIbYFJsPoaRgMlL6zIAm0nlOoZ9gEW7FLwUqYdskm8bYdpF2byQhKIi7UVPgCqm3oZ2CNzGFR4qtRhd1tw22Ue5hJ1sL34AuLf9o5dL8fqcEGOcWuiax85juN7hCuenTEZuQ1bES3sg9y_Xlb3SZuYe6HtMV9Tdsxw7y8eOqcAFdWnunM7RA70GU7BFTwt"/>
+<div class="absolute top-4 left-4 bg-primary-fixed-dim text-on-primary-fixed px-4 py-1 font-label-bold text-label-bold tracking-widest">PURE ISOLATE</div>
+</div>
+<div class="grid grid-cols-4 gap-4">
+<div class="aspect-square border border-primary-fixed-dim bg-surface-container overflow-hidden cursor-pointer">
+<img class="w-full h-full object-cover" data-alt="Close up shot of pure white whey protein isolate powder being scooped with a black measuring scoop. Dramatic side lighting creates high contrast shadows on the powder's texture. Dark charcoal background with a hint of electric lime glow." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCkrl9079srV5pWlacHwN8spUCPE6GqZcNSOeKHUT_UI-fzkphZeheFRuzlWtljK5UO7fMyPN0eT_ej5zh6Hyxa8eYNxNdBv5aZ0RzsjAdX_-3da2hhO9sXGLrwAd_fqff7Z1CNgiktlv6MKomh_8rdAbDw4ADHcEcAvqYnHNUXak0mMDO0dWH0DlJJ7_v-oiOWi2qH-a_GZ1We20UKBX0b6khDcftN0J8a-Rg8gz52yX8dIRaCwYjH"/>
+</div>
+<div class="aspect-square border border-outline-variant bg-surface-container overflow-hidden cursor-pointer hover:border-primary-fixed-dim transition-colors">
+<img class="w-full h-full object-cover" data-alt="A fitness enthusiast in a dark training facility shaking a black protein shaker bottle vigorously. Motion blur on the shaker adds energy and urgency. High contrast black and white style with sharp neon green accents on the gear." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9z7AYRpJe7cnZN7-IOXz2Jj0_4C7qIkmbOX1bOvrTDlJ1LEjMDawZ5GGYbVRe3j71mAfMENmbzStfSMXd4ZPayUMxmnMdtXswyQ_4AGxP-HWtPNkp9GUd9j2v_7urVe44xI9YJGUxIxOpV3IOfY_0JZrGHj1ojNO6GbZIT3N3w82LPcWITXBfjQ1-9AYm5kDWMzIX00QDjhafwQDbY0mfaJho4N0lSKjWFdR1hkH2ygnNfqn3K9H_"/>
+</div>
+<div class="aspect-square border border-outline-variant bg-surface-container overflow-hidden cursor-pointer hover:border-primary-fixed-dim transition-colors">
+<img class="w-full h-full object-cover" data-alt="Nutrition label close up on a textured black plastic bottle. Sharp focus on 25g Protein and 0g Sugar text. The aesthetic is technical and engineered, like a data sheet." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAH-DwV3teRyLVkJT7nHZnp-1f3bphnJa3WprfCJ1fjHE6nUefI4hLqeiwteFNJlH7eWOfsZ2Ico0Dm_R9jrQSmrW_hWx1XeoYatHtL-Da-PZEp27Hzb7Me4Tziqe8G7rDHbARJFLJlNJWydiAOW6No6l5JsDIE298ObUXkmMP1v8e62jitVz1-JCmftVuUwJWIaDNPDzOvl1AsKEBYDx8QpfA3oOS7jta7Qrx9bhmLuRVJEQSw5GfH"/>
+</div>
+<div class="aspect-square border border-outline-variant bg-surface-container overflow-hidden cursor-pointer hover:border-primary-fixed-dim transition-colors">
+<img class="w-full h-full object-cover" data-alt="Macro photography of a vanilla bean and a piece of dark chocolate melting together, representing the flavor profile. Mood lighting with deep shadows and vibrant textures." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQDbL7yE570xbjQ2rgcH_Bz3G0XTDWybzCN5zA-gXXL-Xca6JcWL__nG8ymTVnNNM9cKLXdcWKHFqkrRKzktwr1AWm9ISC6ZhyNBAUIwDH8fAV2zHu0ugDzKUsQkHs13nSWg1AI1BiOYeutFw_KEBfTJxrphdEeJ5Zm_f8d46iWSigduRcAZwRcqJETljwO3sbTz2h4xQUHHLy3ggextkB7pJ1I2qGu4-QXvnywlv7stjkWvlbnfY6"/>
+</div>
+</div>
+</div>
+<!-- Product Info Column -->
+<div class="md:col-span-5 flex flex-col gap-8">
+<header>
+<div class="flex gap-2 mb-2 items-center">
+<div class="flex text-primary-fixed-dim">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<span class="text-label-bold font-label-bold opacity-60">(1,240 REVIEWS)</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-primary uppercase leading-none mb-4">TITAN ISOLATE<br/><span class="text-primary-fixed-dim">100% WHEY</span></h1>
+<p class="text-on-surface-variant font-body-lg text-body-lg">The gold standard in muscle recovery. Engineered for maximum absorption with zero fillers, zero sugars, and 100% performance.</p>
+</header>
+<!-- Configuration -->
+<div class="space-y-6">
+<!-- Size -->
+<div>
+<span class="font-label-bold text-label-bold text-on-surface opacity-60 block mb-3 uppercase tracking-tighter">SELECT SIZE</span>
+<div class="flex gap-4">
+<button class="flex-1 py-4 border-2 border-primary-fixed-dim bg-surface-container-highest text-primary-fixed-dim font-headline-sm text-headline-sm flex flex-col items-center justify-center">
+                                2LB <span class="text-label-bold font-label-bold opacity-80">28 SERVINGS</span>
+</button>
+<button class="flex-1 py-4 border border-outline-variant hover:border-primary-fixed-dim text-on-surface font-headline-sm text-headline-sm flex flex-col items-center justify-center transition-all">
+                                5LB <span class="text-label-bold font-label-bold opacity-60">71 SERVINGS</span>
+</button>
+</div>
+</div>
+<!-- Flavor -->
+<div>
+<span class="font-label-bold text-label-bold text-on-surface opacity-60 block mb-3 uppercase tracking-tighter">SELECT FLAVOR</span>
+<div class="grid grid-cols-2 gap-4">
+<button class="py-3 px-4 border border-primary-fixed-dim bg-primary-container/10 text-primary-fixed-dim font-label-bold text-label-bold text-left flex justify-between items-center">
+                                ARCTIC VANILLA
+                                <span class="material-symbols-outlined text-[18px]">check_circle</span>
+</button>
+<button class="py-3 px-4 border border-outline-variant hover:border-outline text-on-surface font-label-bold text-label-bold text-left">
+                                MIDNIGHT COCOA
+                            </button>
+<button class="py-3 px-4 border border-outline-variant hover:border-outline text-on-surface font-label-bold text-label-bold text-left">
+                                VELVET STRAWBERRY
+                            </button>
+<button class="py-3 px-4 border border-outline-variant hover:border-outline text-on-surface font-label-bold text-label-bold text-left">
+                                COOKIES &amp; GRIT
+                            </button>
+</div>
+</div>
+<!-- Purchase Options -->
+<div class="flex flex-col gap-4 pt-4">
+<div class="p-4 border border-outline-variant bg-surface-container flex items-center justify-between cursor-pointer group hover:border-primary-fixed-dim transition-colors">
+<div class="flex items-center gap-3">
+<div class="w-5 h-5 rounded-full border-2 border-primary-fixed-dim flex items-center justify-center">
+<div class="w-2.5 h-2.5 bg-primary-fixed-dim rounded-full"></div>
+</div>
+<div>
+<span class="font-label-bold text-label-bold text-on-surface block">ONE-TIME PURCHASE</span>
+<span class="text-headline-sm font-headline-sm">$44.99</span>
+</div>
+</div>
+</div>
+<div class="p-4 border border-outline-variant bg-surface-container flex items-center justify-between cursor-pointer group hover:border-primary-fixed-dim transition-colors">
+<div class="flex items-center gap-3">
+<div class="w-5 h-5 rounded-full border border-outline-variant"></div>
+<div>
+<span class="font-label-bold text-label-bold text-primary-fixed-dim block">SUBSCRIBE &amp; SAVE (15%)</span>
+<span class="text-headline-sm font-headline-sm">$38.24</span>
+</div>
+</div>
+<span class="bg-secondary-container text-on-secondary-container px-3 py-1 font-label-bold text-[10px] tracking-widest">BEST VALUE</span>
+</div>
+</div>
+<button class="w-full speed-gradient py-6 text-on-primary font-headline-md text-headline-md uppercase tracking-widest glow-hover transition-all active:scale-95">
+                        ADD TO CART
+                    </button>
+<div class="flex justify-between items-center py-4 border-t border-outline-variant">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary-fixed-dim">verified</span>
+<span class="text-label-bold font-label-bold uppercase">Lab Tested PuritY</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary-fixed-dim">local_shipping</span>
+<span class="text-label-bold font-label-bold uppercase">Free Global Shipping</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Technical Data / Nutrition Table Section -->
+<section class="mt-24 border border-outline-variant bg-surface-container-low p-8 md:p-12">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-16">
+<div>
+<h2 class="font-headline-lg text-headline-lg mb-8 uppercase tracking-tighter border-l-4 border-primary-fixed-dim pl-6">NUTRITION FACTS</h2>
+<div class="space-y-2 font-body-md text-body-md">
+<div class="flex justify-between py-2 border-b-2 border-on-surface">
+<span class="font-bold uppercase">Amount Per Serving</span>
+<span class="font-bold">1 Scoop (32g)</span>
+</div>
+<div class="flex justify-between py-3 border-b border-outline-variant">
+<span class="font-bold text-headline-sm">CALORIES</span>
+<span class="font-bold text-headline-sm">110</span>
+</div>
+<div class="flex justify-between py-1 border-b border-outline-variant">
+<span>TOTAL FAT 0.5g</span>
+<span class="font-bold">1%</span>
+</div>
+<div class="flex justify-between py-1 border-b border-outline-variant pl-4">
+<span>Saturated Fat 0g</span>
+<span class="font-bold">0%</span>
+</div>
+<div class="flex justify-between py-1 border-b border-outline-variant">
+<span class="font-bold">CHOLESTEROL 5mg</span>
+<span class="font-bold">2%</span>
+</div>
+<div class="flex justify-between py-1 border-b border-outline-variant">
+<span class="font-bold">SODIUM 150mg</span>
+<span class="font-bold">7%</span>
+</div>
+<div class="flex justify-between py-3 border-b border-outline-variant bg-primary-fixed-dim/5 px-2">
+<span class="font-bold text-primary-fixed-dim">PROTEIN 25g</span>
+<span class="font-bold text-primary-fixed-dim">50%</span>
+</div>
+<div class="flex justify-between py-1 border-b border-outline-variant">
+<span>TOTAL CARBOHYDRATE 1g</span>
+<span class="font-bold">0%</span>
+</div>
+<div class="flex justify-between py-1 border-b-4 border-on-surface pl-4">
+<span class="font-bold">Total Sugars 0g</span>
+<span class="font-bold">0%</span>
+</div>
+</div>
+</div>
+<div class="flex flex-col justify-center">
+<h3 class="font-headline-sm text-headline-sm mb-6 text-primary-fixed-dim">WHY TITAN ISOLATE?</h3>
+<div class="space-y-6">
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-primary-fixed-dim bg-surface-container-highest p-3 h-fit">bolt</span>
+<div>
+<h4 class="font-label-bold text-label-bold uppercase">Rapid Absorption</h4>
+<p class="text-on-surface-variant text-body-md">Cold-filtered microfiltration ensures that your muscles get the fuel they need within minutes of ingestion.</p>
+</div>
+</div>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-primary-fixed-dim bg-surface-container-highest p-3 h-fit">biotech</span>
+<div>
+<h4 class="font-label-bold text-label-bold uppercase">Zero Fillers</h4>
+<p class="text-on-surface-variant text-body-md">No amino-spiking, no hidden sugars, no soy. Just 100% pure whey protein isolate engineered for results.</p>
+</div>
+</div>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-primary-fixed-dim bg-surface-container-highest p-3 h-fit">fitness_center</span>
+<div>
+<h4 class="font-label-bold text-label-bold uppercase">BCAA Rich</h4>
+<p class="text-on-surface-variant text-body-md">Naturally high in Branched-Chain Amino Acids (5.5g per serving) to stimulate muscle protein synthesis.</p>
+</div>
+</div>
+</div>
+<!-- Progress bars for macros -->
+<div class="mt-12 space-y-4">
+<div class="space-y-1">
+<div class="flex justify-between text-label-bold font-label-bold">
+<span>PROTEIN</span>
+<span>25G</span>
+</div>
+<div class="h-4 bg-surface-container-highest">
+<div class="h-full bg-primary-fixed-dim w-[90%]"></div>
+</div>
+</div>
+<div class="space-y-1">
+<div class="flex justify-between text-label-bold font-label-bold">
+<span>CARBS</span>
+<span>1G</span>
+</div>
+<div class="h-4 bg-surface-container-highest">
+<div class="h-full bg-secondary-container w-[5%]"></div>
+</div>
+</div>
+<div class="space-y-1">
+<div class="flex justify-between text-label-bold font-label-bold">
+<span>FATS</span>
+<span>0.5G</span>
+</div>
+<div class="h-4 bg-surface-container-highest">
+<div class="h-full bg-on-tertiary-container w-[3%]"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Customer Reviews -->
+<section class="mt-24">
+<div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-4">
+<div>
+<h2 class="font-headline-lg text-headline-lg uppercase tracking-tighter">BATTLE TESTED</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Real feedback from athletes pushing the limit.</p>
+</div>
+<button class="border-2 border-primary-fixed-dim text-primary-fixed-dim px-8 py-3 font-label-bold text-label-bold uppercase hover:bg-primary-fixed-dim hover:text-on-primary transition-all">WRITE A REVIEW</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Review 1 -->
+<div class="p-6 border border-outline-variant bg-surface-container-low flex flex-col gap-4">
+<div class="flex text-primary-fixed-dim">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md text-body-md italic text-on-surface">"The mixability is insane. No clumps even with cold water. Recovery time has noticeably dropped since I switched to Titan Isolate."</p>
+<div class="mt-auto pt-4 border-t border-outline-variant flex items-center gap-3">
+<div class="w-10 h-10 bg-primary-fixed-dim rounded-full flex items-center justify-center text-on-primary font-bold">MK</div>
+<div>
+<span class="block font-label-bold text-label-bold uppercase">MARCUS K.</span>
+<span class="text-[12px] opacity-60 uppercase">VERIFIED ELITE ATHLETE</span>
+</div>
+</div>
+</div>
+<!-- Review 2 -->
+<div class="p-6 border border-outline-variant bg-surface-container-low flex flex-col gap-4">
+<div class="flex text-primary-fixed-dim">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md text-body-md italic text-on-surface">"Arctic Vanilla is the best flavor on the market. Not too sweet, no weird aftertaste. It's my post-workout reward every single day."</p>
+<div class="mt-auto pt-4 border-t border-outline-variant flex items-center gap-3">
+<div class="w-10 h-10 bg-primary-fixed-dim rounded-full flex items-center justify-center text-on-primary font-bold">JS</div>
+<div>
+<span class="block font-label-bold text-label-bold uppercase">JESSICA S.</span>
+<span class="text-[12px] opacity-60 uppercase">CROSSFIT PRO</span>
+</div>
+</div>
+</div>
+<!-- Review 3 -->
+<div class="p-6 border border-outline-variant bg-surface-container-low flex flex-col gap-4">
+<div class="flex text-primary-fixed-dim">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md text-body-md italic text-on-surface">"Pure isolate. No bloat. Finally a protein powder that doesn't mess with my digestion. Worth every penny."</p>
+<div class="mt-auto pt-4 border-t border-outline-variant flex items-center gap-3">
+<div class="w-10 h-10 bg-primary-fixed-dim rounded-full flex items-center justify-center text-on-primary font-bold">DT</div>
+<div>
+<span class="block font-label-bold text-label-bold uppercase">DAVID T.</span>
+<span class="text-[12px] opacity-60 uppercase">BODYBUILDER</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full bg-surface-dim border-t border-outline-variant mt-24">
+<div class="flex flex-col md:flex-row justify-between items-center w-full px-margin-desktop py-12 max-w-container-max mx-auto gap-gutter">
+<div class="flex flex-col gap-4 items-center md:items-start">
+<span class="font-headline-md text-headline-md text-primary-fixed-dim">TITAN PROTEIN</span>
+<p class="text-on-surface-variant font-label-bold text-label-bold">© 2024 TITAN PROTEIN. ENGINEERED FOR PERFORMANCE.</p>
+</div>
+<div class="flex flex-wrap justify-center gap-6">
+<a class="text-on-surface-variant hover:text-primary-fixed-dim hover:underline decoration-primary-fixed-dim underline-offset-4 font-label-bold text-label-bold transition-all" href="#">PRIVACY</a>
+<a class="text-on-surface-variant hover:text-primary-fixed-dim hover:underline decoration-primary-fixed-dim underline-offset-4 font-label-bold text-label-bold transition-all" href="#">TERMS</a>
+<a class="text-on-surface-variant hover:text-primary-fixed-dim hover:underline decoration-primary-fixed-dim underline-offset-4 font-label-bold text-label-bold transition-all" href="#">LAB TESTS</a>
+<a class="text-on-surface-variant hover:text-primary-fixed-dim hover:underline decoration-primary-fixed-dim underline-offset-4 font-label-bold text-label-bold transition-all" href="#">WHOLESALE</a>
+<a class="text-on-surface-variant hover:text-primary-fixed-dim hover:underline decoration-primary-fixed-dim underline-offset-4 font-label-bold text-label-bold transition-all" href="#">CONTACT</a>
+</div>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-on-surface-variant hover:text-primary-fixed-dim cursor-pointer">share</span>
+<span class="material-symbols-outlined text-on-surface-variant hover:text-primary-fixed-dim cursor-pointer">public</span>
+<span class="material-symbols-outlined text-on-surface-variant hover:text-primary-fixed-dim cursor-pointer">mail</span>
+</div>
+</div>
+</footer>
+<script>
+        // Micro-interaction for the "Add to Cart" button
+        const addToCartBtn = document.querySelector('.speed-gradient');
+        addToCartBtn.addEventListener('click', () => {
+            const originalText = addToCartBtn.innerText;
+            addToCartBtn.innerText = 'ADDING...';
+            addToCartBtn.classList.add('opacity-80');
+            
+            setTimeout(() => {
+                addToCartBtn.innerText = 'ADDED TO CART!';
+                addToCartBtn.classList.remove('opacity-80');
+                addToCartBtn.classList.add('bg-white', 'text-black');
+                
+                setTimeout(() => {
+                    addToCartBtn.innerText = originalText;
+                    addToCartBtn.classList.remove('bg-white', 'text-black');
+                }, 2000);
+            }, 800);
+        });
+
+        // Simple gallery switcher simulation
+        const thumbnails = document.querySelectorAll('.aspect-square.cursor-pointer');
+        const mainImage = document.querySelector('img[data-alt*="Titan Isolate Whey"]');
+        
+        thumbnails.forEach(thumb => {
+            thumb.addEventListener('click', () => {
+                thumbnails.forEach(t => t.classList.replace('border-primary-fixed-dim', 'border-outline-variant'));
+                thumb.classList.replace('border-outline-variant', 'border-primary-fixed-dim');
+                // In a real app, you'd swap src here
+            });
+        });
+    </script>
+</body></html>

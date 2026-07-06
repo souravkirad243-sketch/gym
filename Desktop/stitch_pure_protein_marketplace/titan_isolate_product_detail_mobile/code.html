@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Hanken+Grotesk:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .speed-gradient {
+            background: linear-gradient(135deg, #abd600 0%, #c3f400 100%);
+        }
+        .neon-glow:hover {
+            box-shadow: 0 0 15px rgba(195, 244, 0, 0.3);
+        }
+        /* Custom scrollbar for horizontal carousel */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "background": "#111508",
+                        "outline": "#8e9379",
+                        "surface-container": "#1e2113",
+                        "secondary-container": "#d73b00",
+                        "on-tertiary-container": "#556774",
+                        "surface-container-highest": "#333627",
+                        "surface-container-high": "#282b1d",
+                        "inverse-primary": "#506600",
+                        "on-tertiary-fixed-variant": "#374956",
+                        "on-surface-variant": "#c4c9ac",
+                        "surface-container-low": "#1a1d10",
+                        "on-tertiary": "#21323e",
+                        "primary-container": "#c3f400",
+                        "primary": "#ffffff",
+                        "on-secondary-container": "#fffbff",
+                        "on-primary": "#283500",
+                        "on-error-container": "#ffdad6",
+                        "secondary-fixed": "#ffdbd1",
+                        "on-background": "#e2e4cf",
+                        "surface": "#111508",
+                        "on-primary-container": "#556d00",
+                        "on-error": "#690005",
+                        "secondary": "#ffb5a0",
+                        "on-primary-fixed-variant": "#3c4d00",
+                        "tertiary": "#ffffff",
+                        "primary-fixed-dim": "#abd600",
+                        "on-secondary-fixed-variant": "#862200",
+                        "surface-bright": "#373b2c",
+                        "tertiary-container": "#d2e5f5",
+                        "surface-variant": "#333627",
+                        "surface-container-lowest": "#0c0f04",
+                        "on-secondary-fixed": "#3b0900",
+                        "inverse-on-surface": "#2f3223",
+                        "surface-dim": "#111508",
+                        "on-primary-fixed": "#161e00",
+                        "on-tertiary-fixed": "#0b1d29",
+                        "tertiary-fixed": "#d2e5f5",
+                        "outline-variant": "#444933",
+                        "inverse-surface": "#e2e4cf",
+                        "error": "#ffb4ab",
+                        "primary-fixed": "#c3f400",
+                        "on-secondary": "#5f1500",
+                        "error-container": "#93000a",
+                        "surface-tint": "#abd600",
+                        "tertiary-fixed-dim": "#b6c9d8",
+                        "secondary-fixed-dim": "#ffb5a0",
+                        "on-surface": "#e2e4cf"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "unit": "4px",
+                        "margin-mobile": "16px",
+                        "margin-desktop": "64px",
+                        "container-max": "1280px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Anton"],
+                        "body-lg": ["Hanken Grotesk"],
+                        "headline-sm": ["Anton"],
+                        "label-bold": ["Hanken Grotesk"],
+                        "headline-xl-mobile": ["Anton"],
+                        "headline-xl": ["Anton"],
+                        "headline-lg": ["Anton"],
+                        "body-md": ["Hanken Grotesk"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["32px", {"lineHeight": "36px", "fontWeight": "400"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "headline-sm": ["24px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "label-bold": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "700"}],
+                        "headline-xl-mobile": ["48px", {"lineHeight": "48px", "fontWeight": "400"}],
+                        "headline-xl": ["80px", {"lineHeight": "80px", "letterSpacing": "-0.02em", "fontWeight": "400"}],
+                        "headline-lg": ["48px", {"lineHeight": "48px", "fontWeight": "400"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body-md overflow-x-hidden">
+<!-- Top Navigation -->
+<nav class="w-full top-0 sticky z-50 bg-background border-b border-outline-variant flex justify-between items-center px-4 py-4">
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-on-surface">arrow_back</button>
+<span class="font-headline-lg text-headline-lg text-primary-fixed-dim tracking-tighter italic">TITAN PROTEIN</span>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary-fixed-dim">shopping_cart</span>
+<span class="material-symbols-outlined text-on-surface">person</span>
+</div>
+</nav>
+<main class="pb-32">
+<!-- Product Image Carousel -->
+<section class="relative bg-surface-container-low overflow-hidden">
+<div class="flex overflow-x-auto snap-x snap-mandatory no-scrollbar w-full h-[450px]">
+<div class="flex-none w-full snap-center flex justify-center items-center p-8">
+<img class="max-h-full object-contain" data-alt="A premium black protein powder tub with vibrant Electric Lime 'TITAN ISOLATE' text, set against a high-contrast dark industrial gym background. The lighting is dramatic and high-key, emphasizing the sleek textures of the packaging and the intense, athletic mood of the brand. Professional sports photography style with crushed blacks and crisp details." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBX2lzzTyoXl2y9GjCuRTLVw4LxjHyUM9TGnWzdXT2zstJyMM6ar3z9_nIioqKz-dnU4rG37004B-kiI2Fpkj53nBY5hyqTv2bW1AZ3MxpI7KDfNkUghSI2azPWbyZxqPShzhOFvZJ62kNAZJgGxk67BNvZriuGlv8XjX8bdDCWcYOycI0wbpMkgElzVzl9tgrRbwkq5HWNRc1uWxrp4UzZNmYR3LI2H94n2NubM2FgYrExJhmLaYTk"/>
+</div>
+<div class="flex-none w-full snap-center flex justify-center items-center p-8">
+<img class="max-h-full object-contain" data-alt="Macro close-up shot of fine white protein powder being scooped with a black measuring tool. The background is a charcoal-colored textured surface reflecting a modern, brutalist aesthetic. The lighting creates sharp shadows and highlights the crystalline texture of the isolate powder, maintaining a high-performance, engineered feel." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAOFOkvke9cFiQihtQEj7XnqNxvKZO3sEPxrSx8YW5fZHGQcEmASPSqbUSu3HOQYsjH2KIZNbyS6iE2e_QLZ8L3Vc9nBjkEsY087WkvAn8ll5Ji55gAyRxJ0v-ZB8QM275SEIBQoiNFINpwNbgvlZDRG_10Oyqy7I7df1bayY1qa8gZkoszL7K35-mzS-BS8M0wPL72P1SG6-JnYpCUApheLJJZsXzwfg8BJmkYs_W1IIwBOBcH-D3T"/>
+</div>
+<div class="flex-none w-full snap-center flex justify-center items-center p-8">
+<img class="max-h-full object-contain" data-alt="Technical product shot showing the nutritional breakdown printed on the back of the Titan Isolate container. The typography is clean and monospaced, mimicking a data sheet. The shot is framed with an aggressive athletic perspective, using the dark background and lime green accents characteristic of the Titan Protein brand identity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAdjBQNLl7q0RuFoDvMs0M0GQ4Pg-nEzK4Ezd5PAkv-T4dE5NMyGzl_cKKhHVtWDg1Bkca-PfYQi8a1NZOTZMKlVqqXgzEnATLm8tAEbjbWGTBVxrMzpixTNWaQX6_48bhtYLVUNKA8pRFNXzVgzvttwDhUmt_uTi9dd1ANEZyezEwyQYJdHD8cobmfTH2CZY4PLRyo3c9IufPH9ISzI-PCQBdn4X_TiAFkjcblkn6Uw2xYsmrRuXgP"/>
+</div>
+</div>
+<!-- Indicators -->
+<div class="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
+<div class="w-8 h-1 bg-primary-fixed"></div>
+<div class="w-8 h-1 bg-outline-variant"></div>
+<div class="w-8 h-1 bg-outline-variant"></div>
+</div>
+</section>
+<!-- Product Details -->
+<section class="px-margin-mobile pt-8">
+<div class="flex justify-between items-start mb-2">
+<h1 class="font-headline-xl-mobile text-headline-xl-mobile text-primary tracking-tighter uppercase">TITAN ISOLATE</h1>
+<div class="bg-primary-container text-on-primary-container px-2 py-1 font-label-bold text-label-bold">TOP RATED</div>
+</div>
+<div class="flex items-center gap-2 mb-6">
+<div class="flex text-primary-fixed-dim">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star_half</span>
+</div>
+<span class="font-label-bold text-on-surface-variant">4.9 (2,104 REVIEWS)</span>
+</div>
+<!-- Price & Promo -->
+<div class="flex items-baseline gap-3 mb-8">
+<span class="font-headline-md text-headline-md text-primary">$54.99</span>
+<span class="font-body-md text-on-surface-variant line-through">$69.99</span>
+<span class="text-secondary-container font-label-bold text-label-bold">20% OFF</span>
+</div>
+<!-- Configuration: Size -->
+<div class="mb-8">
+<label class="block font-label-bold text-label-bold text-on-surface-variant mb-4 uppercase tracking-widest">Select Weight</label>
+<div class="grid grid-cols-2 gap-3">
+<button class="border-2 border-primary-fixed-dim bg-surface-container-highest py-4 font-label-bold text-primary flex flex-col items-center">
+<span>2 LBS</span>
+<span class="text-xs opacity-60">28 SERVINGS</span>
+</button>
+<button class="border border-outline-variant py-4 font-label-bold text-on-surface-variant flex flex-col items-center">
+<span>5 LBS</span>
+<span class="text-xs opacity-60">70 SERVINGS</span>
+</button>
+</div>
+</div>
+<!-- Configuration: Flavor -->
+<div class="mb-10">
+<label class="block font-label-bold text-label-bold text-on-surface-variant mb-4 uppercase tracking-widest">Select Flavor</label>
+<div class="space-y-3">
+<button class="w-full flex items-center justify-between border-2 border-primary-fixed-dim bg-surface-container-highest p-4 group">
+<div class="flex items-center gap-3">
+<div class="w-4 h-4 bg-primary-fixed-dim"></div>
+<span class="font-label-bold text-primary">CHOCOLATE CRUNCH</span>
+</div>
+<span class="material-symbols-outlined text-primary-fixed-dim">check_circle</span>
+</button>
+<button class="w-full flex items-center justify-between border border-outline-variant p-4 text-on-surface-variant">
+<div class="flex items-center gap-3">
+<div class="w-4 h-4 bg-on-tertiary-container"></div>
+<span class="font-label-bold">VANILLA BEAN</span>
+</div>
+</button>
+<button class="w-full flex items-center justify-between border border-outline-variant p-4 text-on-surface-variant opacity-50">
+<div class="flex items-center gap-3">
+<div class="w-4 h-4 bg-secondary"></div>
+<span class="font-label-bold">STRAWBERRY BLAST</span>
+</div>
+<span class="text-xs uppercase font-label-bold">Sold Out</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Nutrition Facts Section -->
+<section class="bg-surface-container-low border-y border-outline-variant py-12 px-margin-mobile">
+<h2 class="font-headline-md text-headline-md text-primary mb-6 uppercase">NUTRITION FACTS</h2>
+<div class="grid grid-cols-3 gap-1 mb-8">
+<div class="bg-background border border-outline-variant p-4 flex flex-col items-center">
+<span class="text-primary-fixed-dim font-headline-sm text-headline-sm">25g</span>
+<span class="font-label-bold text-[10px] uppercase text-on-surface-variant">Protein</span>
+</div>
+<div class="bg-background border border-outline-variant p-4 flex flex-col items-center">
+<span class="text-primary font-headline-sm text-headline-sm">1g</span>
+<span class="font-label-bold text-[10px] uppercase text-on-surface-variant">Carbs</span>
+</div>
+<div class="bg-background border border-outline-variant p-4 flex flex-col items-center">
+<span class="text-primary font-headline-sm text-headline-sm">0.5g</span>
+<span class="font-label-bold text-[10px] uppercase text-on-surface-variant">Fat</span>
+</div>
+</div>
+<!-- Progress Bars -->
+<div class="space-y-6">
+<div>
+<div class="flex justify-between font-label-bold text-label-bold mb-2 uppercase">
+<span>Whey Protein Isolate</span>
+<span class="text-primary-fixed-dim">100%</span>
+</div>
+<div class="w-full h-3 bg-surface-container-highest">
+<div class="h-full speed-gradient w-full"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between font-label-bold text-label-bold mb-2 uppercase">
+<span>BCAA Content</span>
+<span class="text-primary">5.5g</span>
+</div>
+<div class="w-full h-3 bg-surface-container-highest">
+<div class="h-full bg-primary w-[75%]"></div>
+</div>
+</div>
+</div>
+<div class="mt-8 border-t border-outline-variant pt-6">
+<p class="font-body-md text-on-surface-variant italic text-sm">
+                    Engineered for rapid absorption. Cross-flow microfiltered to ensure maximum purity and zero bloating.
+                </p>
+</div>
+</section>
+<!-- Reviews Section -->
+<section class="py-12 px-margin-mobile">
+<div class="flex justify-between items-center mb-8">
+<h2 class="font-headline-md text-headline-md text-primary uppercase">REVIEWS</h2>
+<button class="font-label-bold text-label-bold text-primary-fixed-dim border-b border-primary-fixed-dim">WRITE ONE</button>
+</div>
+<div class="space-y-8">
+<!-- Review 1 -->
+<div class="border-l-4 border-primary-fixed-dim pl-6 pb-2">
+<div class="flex text-primary-fixed-dim mb-2 text-sm">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-headline-sm text-headline-sm text-primary mb-2 italic">"ELITE LEVEL PURITY"</p>
+<p class="font-body-md text-on-surface-variant mb-4">The mixability is unmatched. No clumps, even with a simple spoon stir. Muscle recovery has noticeably improved since switching to Titan.</p>
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 bg-surface-container-highest rounded-full overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A profile portrait of a focused, muscular athlete with short hair, sweating slightly after a workout. The lighting is low and dramatic, focusing on the face, fitting the high-intensity athletic aesthetic of the Titan Protein brand." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDA704V6FV9LMJQ6LorjUPAbkYsO3TlqgaAxIf4ZLPPpF8-Z4laeJ0-BfD9kZDZe4lGqmy_2dR-8VMOEtlouijB33YvUx9DsTnIjxHP91KLHViN-MsAL11QJC7DjHHeXMyLbLmDItQmsDH-qLpmllAzsUcqeJzuroCJhxRIHZqDpu4KeOy-D_68slGw-t8w1Bc5-sth7NJEypx_C6S7S6rytYR9Zph2HJO1dyW63PrTauxyxpCw6Aay"/>
+</div>
+<span class="font-label-bold text-on-surface uppercase">Marcus R.</span>
+<span class="material-symbols-outlined text-primary-fixed-dim text-xs">verified</span>
+</div>
+</div>
+<!-- Review 2 -->
+<div class="border-l-4 border-outline-variant pl-6 pb-2">
+<div class="flex text-primary-fixed-dim mb-2 text-sm">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined">star</span>
+</div>
+<p class="font-headline-sm text-headline-sm text-primary mb-2 italic">"BEST CHOCOLATE FLAVOR"</p>
+<p class="font-body-md text-on-surface-variant mb-4">Actually tastes like real chocolate, not that chemical stuff. Minus one star because the 5lb tubs sell out too fast!</p>
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 bg-surface-container-highest rounded-full overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A portrait of a athletic woman with her hair in a tight ponytail, standing in a gym with industrial equipment blurred in the background. High contrast, sharp details, and a cool-toned atmospheric lighting that aligns with the premium performance brand identity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBVTLmpq_lRPWZMfXg6umO3C4SpLuRurmUKUbmy2ltxt7zyKvw91CYVkPYMbZ-qEx22Cu9tSTGatd-0drIATiKs4bQ4RYS-UK3OdiE2OB5wLIQnu5lYRofzHXypL9f6HhqBD8KCNZEZj9xTVFH19JxjvK_su9X3HSKk6FGXuSgm1zG2gwUN4O1o2UcoUU7SfbyHhDJvnW1r03QKrfWCjW13_ij6b0FKZFwXDXycFkNV5b02yfbokGzw"/>
+</div>
+<span class="font-label-bold text-on-surface uppercase">Sarah L.</span>
+<span class="material-symbols-outlined text-primary-fixed-dim text-xs">verified</span>
+</div>
+</div>
+</div>
+<button class="w-full mt-12 py-4 border border-outline-variant font-label-bold text-on-surface-variant uppercase tracking-widest hover:bg-surface-container-highest transition-colors">
+                LOAD MORE REVIEWS
+            </button>
+</section>
+</main>
+<!-- Sticky Add to Cart Section -->
+<div class="fixed bottom-0 left-0 w-full bg-background border-t border-outline-variant px-margin-mobile py-4 z-50 flex items-center gap-4 shadow-2xl">
+<div class="flex items-center border border-outline-variant">
+<button class="p-4 text-on-surface-variant material-symbols-outlined">remove</button>
+<span class="px-2 font-headline-sm text-headline-sm text-primary">1</span>
+<button class="p-4 text-on-surface-variant material-symbols-outlined">add</button>
+</div>
+<button class="flex-1 speed-gradient text-on-primary font-headline-sm text-headline-sm py-4 uppercase tracking-tight neon-glow transition-all active:scale-95">
+            ADD TO CART
+        </button>
+</div>
+<!-- Footer -->
+<footer class="w-full bg-surface-dim border-t border-outline-variant flex flex-col md:flex-row justify-between items-center px-margin-mobile py-12 gap-gutter mb-24">
+<div class="text-center md:text-left">
+<span class="font-headline-md text-headline-md text-primary-fixed-dim block mb-2">TITAN PROTEIN</span>
+<p class="font-body-md text-on-surface-variant text-xs mb-8 uppercase tracking-tighter">© 2024 TITAN PROTEIN. ENGINEERED FOR PERFORMANCE.</p>
+</div>
+<div class="flex flex-wrap justify-center gap-6">
+<a class="font-label-bold text-label-bold text-on-surface-variant hover:text-primary-fixed-dim transition-colors uppercase" href="#">PRIVACY</a>
+<a class="font-label-bold text-label-bold text-on-surface-variant hover:text-primary-fixed-dim transition-colors uppercase" href="#">TERMS</a>
+<a class="font-label-bold text-label-bold text-on-surface-variant hover:text-primary-fixed-dim transition-colors uppercase" href="#">LAB TESTS</a>
+<a class="font-label-bold text-label-bold text-on-surface-variant hover:text-primary-fixed-dim transition-colors uppercase" href="#">CONTACT</a>
+</div>
+</footer>
+<script>
+        // Micro-interactions
+        document.querySelectorAll('button').forEach(btn => {
+            btn.addEventListener('mousedown', () => {
+                btn.classList.add('scale-95');
+            });
+            btn.addEventListener('mouseup', () => {
+                btn.classList.remove('scale-95');
+            });
+        });
+
+        // Simple carousel snap feedback logic could be added here
+    </script>
+</body></html>

@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>TITAN PROTEIN | Checkout</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Hanken+Grotesk:wght@400;700&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Anton:wght@100..900&family=Hanken+Grotesk:wght@100..900&display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        /* Custom Scrollbar for the dark theme */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #111508; }
+        ::-webkit-scrollbar-thumb { background: #444933; }
+        ::-webkit-scrollbar-thumb:hover { background: #abd600; }
+
+        .speed-gradient {
+            background: linear-gradient(135deg, #862200 0%, #d73b00 100%);
+        }
+        .primary-gradient {
+            background: linear-gradient(135deg, #abd600 0%, #c3f400 100%);
+        }
+        input:focus {
+            outline: none !important;
+            border-color: #c3f400 !important;
+            ring: 0 !important;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "inverse-primary": "#506600",
+                        "primary-container": "#c3f400",
+                        "on-error-container": "#ffdad6",
+                        "tertiary-fixed": "#d2e5f5",
+                        "surface": "#111508",
+                        "surface-tint": "#abd600",
+                        "error": "#ffb4ab",
+                        "primary-fixed": "#c3f400",
+                        "secondary-fixed-dim": "#ffb5a0",
+                        "on-surface": "#e2e4cf",
+                        "on-tertiary-container": "#556774",
+                        "on-primary-container": "#556d00",
+                        "surface-container-low": "#1a1d10",
+                        "on-tertiary": "#21323e",
+                        "surface-container-lowest": "#0c0f04",
+                        "on-secondary-fixed-variant": "#862200",
+                        "on-secondary-fixed": "#3b0900",
+                        "surface-dim": "#111508",
+                        "primary-fixed-dim": "#abd600",
+                        "on-tertiary-fixed-variant": "#374956",
+                        "on-surface-variant": "#c4c9ac",
+                        "outline": "#8e9379",
+                        "inverse-on-surface": "#2f3223",
+                        "on-secondary": "#5f1500",
+                        "secondary-fixed": "#ffdbd1",
+                        "tertiary-fixed-dim": "#b6c9d8",
+                        "outline-variant": "#444933",
+                        "secondary": "#ffb5a0",
+                        "on-tertiary-fixed": "#0b1d29",
+                        "surface-variant": "#333627",
+                        "surface-container-high": "#282b1d",
+                        "surface-bright": "#373b2c",
+                        "inverse-surface": "#e2e4cf",
+                        "tertiary-container": "#d2e5f5",
+                        "surface-container-highest": "#333627",
+                        "primary": "#ffffff",
+                        "on-background": "#e2e4cf",
+                        "secondary-container": "#d73b00",
+                        "on-secondary-container": "#fffbff",
+                        "on-primary-fixed": "#161e00",
+                        "error-container": "#93000a",
+                        "surface-container": "#1e2113",
+                        "background": "#111508",
+                        "on-error": "#690005",
+                        "tertiary": "#ffffff",
+                        "on-primary-fixed-variant": "#3c4d00",
+                        "on-primary": "#283500"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-desktop": "64px",
+                        "container-max": "1280px",
+                        "margin-mobile": "16px",
+                        "gutter": "24px",
+                        "unit": "4px"
+                    },
+                    "fontFamily": {
+                        "label-bold": ["Hanken Grotesk"],
+                        "headline-xl-mobile": ["Anton"],
+                        "headline-sm": ["Anton"],
+                        "headline-md": ["Anton"],
+                        "headline-xl": ["Anton"],
+                        "body-md": ["Hanken Grotesk"],
+                        "headline-lg": ["Anton"],
+                        "body-lg": ["Hanken Grotesk"]
+                    },
+                    "fontSize": {
+                        "label-bold": ["14px", { "lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "700" }],
+                        "headline-xl-mobile": ["48px", { "lineHeight": "48px", "fontWeight": "400" }],
+                        "headline-sm": ["24px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "headline-md": ["32px", { "lineHeight": "36px", "fontWeight": "400" }],
+                        "headline-xl": ["80px", { "lineHeight": "80px", "letterSpacing": "-0.02em", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "headline-lg": ["48px", { "lineHeight": "48px", "fontWeight": "400" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }]
+                    }
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen">
+<!-- Top Navigation Bar -->
+<header class="w-full top-0 sticky bg-background border-b border-outline-variant z-50">
+<nav class="flex justify-between items-center w-full px-margin-desktop py-4 max-w-container-max mx-auto">
+<div class="font-headline-lg text-headline-lg text-primary-fixed-dim tracking-tighter italic">TITAN PROTEIN</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="font-label-bold text-label-bold text-on-surface hover:text-primary-fixed-dim transition-colors duration-200" href="#">WHEY</a>
+<a class="font-label-bold text-label-bold text-on-surface hover:text-primary-fixed-dim transition-colors duration-200" href="#">PLANT</a>
+<a class="font-label-bold text-label-bold text-on-surface hover:text-primary-fixed-dim transition-colors duration-200" href="#">ABOUT</a>
+<a class="font-label-bold text-label-bold text-on-surface hover:text-primary-fixed-dim transition-colors duration-200" href="#">MISSION</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-on-surface-variant hover:text-primary-fixed-dim transition-all active:scale-95">person</button>
+<div class="relative">
+<button class="material-symbols-outlined text-on-surface-variant hover:text-primary-fixed-dim transition-all active:scale-95">shopping_cart</button>
+<span class="absolute -top-2 -right-2 bg-secondary-container text-white text-[10px] px-1.5 py-0.5 font-bold">2</span>
+</div>
+</div>
+</nav>
+</header>
+<main class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-12">
+<!-- Breadcrumbs -->
+<nav class="flex items-center gap-4 mb-12 overflow-x-auto whitespace-nowrap pb-2">
+<span class="font-label-bold text-label-bold text-on-surface-variant flex items-center gap-2">Cart <span class="material-symbols-outlined text-sm">chevron_right</span></span>
+<span class="font-label-bold text-label-bold text-primary-fixed-dim flex items-center gap-2">Information <span class="material-symbols-outlined text-sm">chevron_right</span></span>
+<span class="font-label-bold text-label-bold text-outline flex items-center gap-2">Shipping <span class="material-symbols-outlined text-sm">chevron_right</span></span>
+<span class="font-label-bold text-label-bold text-outline">Payment</span>
+</nav>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
+<!-- Left Column: Customer Info -->
+<div class="lg:col-span-7 space-y-12">
+<!-- Contact Section -->
+<section>
+<div class="flex justify-between items-end mb-6">
+<h2 class="font-headline-sm text-headline-sm uppercase tracking-tight">Contact Information</h2>
+<p class="font-body-md text-on-surface-variant">Already have an account? <a class="text-primary-fixed-dim font-bold hover:underline" href="#">Log in</a></p>
+</div>
+<div class="space-y-4">
+<input class="w-full bg-surface-container border border-outline-variant px-4 py-4 text-on-surface placeholder:text-outline focus:border-primary-fixed-dim transition-colors" placeholder="Email or mobile phone number" type="email"/>
+<div class="flex items-center gap-2">
+<input class="w-5 h-5 bg-surface-container border-outline-variant text-primary-fixed-dim rounded-none" id="newsletter" type="checkbox"/>
+<label class="font-label-bold text-label-bold text-on-surface-variant" for="newsletter">Keep me up to date on news and exclusive offers</label>
+</div>
+</div>
+</section>
+<!-- Shipping Address Section -->
+<section>
+<h2 class="font-headline-sm text-headline-sm uppercase tracking-tight mb-6">Shipping Address</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="md:col-span-2">
+<select class="w-full bg-surface-container border border-outline-variant px-4 py-4 text-on-surface focus:border-primary-fixed-dim transition-colors">
+<option>United States</option>
+<option>Canada</option>
+<option>United Kingdom</option>
+</select>
+</div>
+<input class="bg-surface-container border border-outline-variant px-4 py-4 text-on-surface placeholder:text-outline focus:border-primary-fixed-dim transition-colors" placeholder="First name" type="text"/>
+<input class="bg-surface-container border border-outline-variant px-4 py-4 text-on-surface placeholder:text-outline focus:border-primary-fixed-dim transition-colors" placeholder="Last name" type="text"/>
+<div class="md:col-span-2">
+<input class="w-full bg-surface-container border border-outline-variant px-4 py-4 text-on-surface placeholder:text-outline focus:border-primary-fixed-dim transition-colors" placeholder="Address" type="text"/>
+</div>
+<div class="md:col-span-2">
+<input class="w-full bg-surface-container border border-outline-variant px-4 py-4 text-on-surface placeholder:text-outline focus:border-primary-fixed-dim transition-colors" placeholder="Apartment, suite, etc. (optional)" type="text"/>
+</div>
+<input class="bg-surface-container border border-outline-variant px-4 py-4 text-on-surface placeholder:text-outline focus:border-primary-fixed-dim transition-colors" placeholder="City" type="text"/>
+<input class="bg-surface-container border border-outline-variant px-4 py-4 text-on-surface placeholder:text-outline focus:border-primary-fixed-dim transition-colors" placeholder="State" type="text"/>
+<input class="bg-surface-container border border-outline-variant px-4 py-4 text-on-surface placeholder:text-outline focus:border-primary-fixed-dim transition-colors" placeholder="ZIP code" type="text"/>
+<input class="bg-surface-container border border-outline-variant px-4 py-4 text-on-surface placeholder:text-outline focus:border-primary-fixed-dim transition-colors" placeholder="Phone (optional)" type="tel"/>
+</div>
+</section>
+<!-- Shipping Method Section -->
+<section>
+<h2 class="font-headline-sm text-headline-sm uppercase tracking-tight mb-6">Shipping Method</h2>
+<div class="border border-outline-variant">
+<label class="flex items-center justify-between p-6 border-b border-outline-variant cursor-pointer group hover:bg-surface-container-low transition-colors">
+<div class="flex items-center gap-4">
+<input checked="" class="w-5 h-5 bg-surface-container border-outline-variant text-primary-fixed-dim rounded-full" name="shipping" type="radio"/>
+<div>
+<p class="font-label-bold text-label-bold text-on-surface">Standard Performance Shipping</p>
+<p class="font-body-md text-on-surface-variant">3-5 Business Days</p>
+</div>
+</div>
+<span class="font-label-bold text-label-bold text-primary-fixed-dim">FREE</span>
+</label>
+<label class="flex items-center justify-between p-6 cursor-pointer group hover:bg-surface-container-low transition-colors">
+<div class="flex items-center gap-4">
+<input class="w-5 h-5 bg-surface-container border-outline-variant text-primary-fixed-dim rounded-full" name="shipping" type="radio"/>
+<div>
+<p class="font-label-bold text-label-bold text-on-surface">TITAN Priority Overdrive</p>
+<p class="font-body-md text-on-surface-variant">Next Business Day</p>
+</div>
+</div>
+<span class="font-label-bold text-label-bold text-primary-fixed-dim">$19.99</span>
+</label>
+</div>
+</section>
+<!-- Payment Details -->
+<section>
+<h2 class="font-headline-sm text-headline-sm uppercase tracking-tight mb-6">Payment</h2>
+<p class="font-body-md text-on-surface-variant mb-4">All transactions are secure and encrypted.</p>
+<div class="border border-outline-variant">
+<div class="p-6 bg-surface-container-low border-b border-outline-variant flex justify-between items-center">
+<div class="flex items-center gap-4">
+<input checked="" class="w-5 h-5 bg-surface-container border-outline-variant text-primary-fixed-dim rounded-full" name="payment" type="radio"/>
+<span class="font-label-bold text-label-bold text-on-surface">Credit Card</span>
+</div>
+<div class="flex gap-2">
+<span class="material-symbols-outlined text-outline">credit_card</span>
+</div>
+</div>
+<div class="p-6 space-y-4">
+<div class="relative">
+<input class="w-full bg-surface-container border border-outline-variant px-4 py-4 text-on-surface focus:border-primary-fixed-dim transition-colors" placeholder="Card number" type="text"/>
+<span class="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 text-outline">lock</span>
+</div>
+<input class="w-full bg-surface-container border border-outline-variant px-4 py-4 text-on-surface focus:border-primary-fixed-dim transition-colors" placeholder="Name on card" type="text"/>
+<div class="grid grid-cols-2 gap-4">
+<input class="bg-surface-container border border-outline-variant px-4 py-4 text-on-surface focus:border-primary-fixed-dim transition-colors" placeholder="Expiration date (MM / YY)" type="text"/>
+<input class="bg-surface-container border border-outline-variant px-4 py-4 text-on-surface focus:border-primary-fixed-dim transition-colors" placeholder="Security code" type="text"/>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- Right Column: Order Summary -->
+<div class="lg:col-span-5">
+<div class="sticky top-28 bg-surface-container p-8 border border-outline-variant">
+<h2 class="font-headline-sm text-headline-sm uppercase tracking-tight mb-8">Order Summary</h2>
+<!-- Cart Items -->
+<div class="space-y-6 mb-8">
+<div class="flex gap-4">
+<div class="w-20 h-24 bg-surface-container-highest border border-outline-variant flex-shrink-0 relative">
+<img class="w-full h-full object-cover" data-alt="A premium black tub of TITAN PROTEIN whey isolate protein powder with bold electric lime typography, sitting on a gritty industrial gym floor with dramatic side lighting emphasizing texture and grit." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNj0qRPP6YmDdf_xyXHUTDRp16MQdNh6WMJpPftL5mTB_csW6Ni-72nEOrum_GRk0Tz7P1tbJ1IJxQDRSDwxAa6tiLAmTT3LRpRKJgUjJc_P6azs8NfHas8MpPkRtjIIQGcyIqVW-ZcodD3NqWi-gO54vsNLhZ-Kgq_gSQRmPc1uo_Uvg__-6IYMCxWjF0UVRD4voX1ZRCyb-lGCEpKxWu8podFsD2_Zp8aXbR4UBocVXdqODcOPyR"/>
+<span class="absolute -top-2 -right-2 w-6 h-6 bg-primary-fixed-dim text-on-primary-fixed font-bold text-xs flex items-center justify-center rounded-none">1</span>
+</div>
+<div class="flex-grow">
+<p class="font-label-bold text-label-bold text-on-surface">TITAN WHEY ISOLATE</p>
+<p class="text-on-surface-variant text-sm">Arctic Mint / 5lb Tub</p>
+</div>
+<span class="font-label-bold text-label-bold text-on-surface">$84.99</span>
+</div>
+<div class="flex gap-4">
+<div class="w-20 h-24 bg-surface-container-highest border border-outline-variant flex-shrink-0 relative">
+<img class="w-full h-full object-cover" data-alt="A sleek industrial shaker bottle with the TITAN PROTEIN logo in high-contrast electric lime, metallic finish, sitting on a gym bench with intense overhead spotlights creating deep shadows." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBWaGsrgJGSARcPYvYjtRCU6SN6UQpZKdA3kaB4wiIWwA_ML5vRMOL6wLn9zz0MJnKhb2CMhoWdnv8BkKqM5HIGlBk7wlBOe30Eqg1ngiPQp3AAqoyTc660U5abYFtK9PO6YmMPhTaFtOj7XZ3S_vZ94E-abzzOKqWRRR1iPp-M3UgS6doRSfY-j-4_ebpcrXowx075VnTQ9ARJwlWIu5gOt253Od9fchZB3YVRmd345yNjyPYPp3tc"/>
+<span class="absolute -top-2 -right-2 w-6 h-6 bg-primary-fixed-dim text-on-primary-fixed font-bold text-xs flex items-center justify-center rounded-none">1</span>
+</div>
+<div class="flex-grow">
+<p class="font-label-bold text-label-bold text-on-surface">TITAN SHAKER PRO</p>
+<p class="text-on-surface-variant text-sm">Stealth Black</p>
+</div>
+<span class="font-label-bold text-label-bold text-on-surface">$19.99</span>
+</div>
+</div>
+<!-- Discount Code -->
+<div class="flex gap-2 mb-8">
+<input class="flex-grow bg-surface border border-outline-variant px-4 py-3 text-on-surface focus:border-primary-fixed-dim transition-colors" placeholder="Discount code" type="text"/>
+<button class="bg-surface-container-highest px-6 py-3 font-label-bold text-label-bold text-on-surface hover:bg-outline-variant transition-colors">APPLY</button>
+</div>
+<!-- Totals -->
+<div class="space-y-4 border-t border-outline-variant pt-8 mb-8">
+<div class="flex justify-between font-label-bold text-label-bold">
+<span class="text-on-surface-variant">Subtotal</span>
+<span class="text-on-surface">$104.98</span>
+</div>
+<div class="flex justify-between font-label-bold text-label-bold">
+<span class="text-on-surface-variant">Shipping</span>
+<span class="text-primary-fixed-dim uppercase">Calculated at next step</span>
+</div>
+<div class="flex justify-between font-label-bold text-label-bold">
+<span class="text-on-surface-variant">Estimated taxes</span>
+<span class="text-on-surface">$8.40</span>
+</div>
+<div class="flex justify-between font-headline-md text-headline-md border-t border-outline-variant pt-4">
+<span>TOTAL</span>
+<span class="text-primary-fixed-dim">$113.38</span>
+</div>
+</div>
+<button class="w-full primary-gradient py-6 font-headline-sm text-headline-sm text-on-primary uppercase tracking-widest hover:scale-[1.02] active:scale-95 transition-all shadow-xl shadow-primary-fixed-dim/10">
+                        Place Order
+                    </button>
+<p class="text-center mt-6 text-on-surface-variant text-xs uppercase tracking-tighter">
+                        Secure Checkout Powered by TITAN Forge Architecture
+                    </p>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full bg-surface-dim border-t border-outline-variant mt-20">
+<div class="flex flex-col md:flex-row justify-between items-center w-full px-margin-desktop py-12 max-w-container-max mx-auto gap-gutter">
+<div class="font-headline-md text-headline-md text-primary-fixed-dim">TITAN PROTEIN</div>
+<div class="flex flex-wrap justify-center gap-8">
+<a class="font-label-bold text-label-bold text-on-surface-variant hover:text-primary-fixed-dim hover:underline decoration-primary-fixed-dim underline-offset-4 transition-all" href="#">PRIVACY</a>
+<a class="font-label-bold text-label-bold text-on-surface-variant hover:text-primary-fixed-dim hover:underline decoration-primary-fixed-dim underline-offset-4 transition-all" href="#">TERMS</a>
+<a class="font-label-bold text-label-bold text-on-surface-variant hover:text-primary-fixed-dim hover:underline decoration-primary-fixed-dim underline-offset-4 transition-all" href="#">LAB TESTS</a>
+<a class="font-label-bold text-label-bold text-on-surface-variant hover:text-primary-fixed-dim hover:underline decoration-primary-fixed-dim underline-offset-4 transition-all" href="#">WHOLESALE</a>
+<a class="font-label-bold text-label-bold text-on-surface-variant hover:text-primary-fixed-dim hover:underline decoration-primary-fixed-dim underline-offset-4 transition-all" href="#">CONTACT</a>
+</div>
+<div class="font-label-bold text-label-bold text-outline text-center md:text-right">
+                © 2024 TITAN PROTEIN. ENGINEERED FOR PERFORMANCE.
+            </div>
+</div>
+</footer>
+<script>
+        // Micro-interaction for form highlighting
+        document.querySelectorAll('input, select').forEach(element => {
+            element.addEventListener('focus', () => {
+                element.parentElement.classList.add('border-primary-fixed-dim');
+            });
+            element.addEventListener('blur', () => {
+                element.parentElement.classList.remove('border-primary-fixed-dim');
+            });
+        });
+
+        // Simple button active state visual
+        const placeOrderBtn = document.querySelector('button');
+        if(placeOrderBtn) {
+            placeOrderBtn.addEventListener('click', function() {
+                this.innerHTML = 'Processing...';
+                this.style.opacity = '0.7';
+                setTimeout(() => {
+                    this.innerHTML = 'Place Order';
+                    this.style.opacity = '1';
+                }, 2000);
+            });
+        }
+    </script>
+</body></html>

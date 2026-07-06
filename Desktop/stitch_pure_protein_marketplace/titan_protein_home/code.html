@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>TITAN PROTEIN | ENGINEERED FOR PERFORMANCE</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Hanken+Grotesk:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary-fixed-dim": "#abd600",
+                        "inverse-on-surface": "#2f3223",
+                        "on-surface-variant": "#c4c9ac",
+                        "on-tertiary": "#21323e",
+                        "on-error-container": "#ffdad6",
+                        "tertiary-container": "#d2e5f5",
+                        "inverse-primary": "#506600",
+                        "on-surface": "#e2e4cf",
+                        "secondary-fixed-dim": "#ffb5a0",
+                        "surface-bright": "#373b2c",
+                        "on-error": "#690005",
+                        "on-primary-fixed-variant": "#3c4d00",
+                        "surface-container-highest": "#333627",
+                        "outline-variant": "#444933",
+                        "surface-dim": "#111508",
+                        "primary-container": "#c3f400",
+                        "on-primary": "#283500",
+                        "error-container": "#93000a",
+                        "error": "#ffb4ab",
+                        "on-tertiary-fixed": "#0b1d29",
+                        "surface-container-lowest": "#0c0f04",
+                        "surface-variant": "#333627",
+                        "secondary-fixed": "#ffdbd1",
+                        "outline": "#8e9379",
+                        "secondary": "#ffb5a0",
+                        "primary": "#ffffff",
+                        "on-secondary-fixed-variant": "#862200",
+                        "on-primary-fixed": "#161e00",
+                        "surface-tint": "#abd600",
+                        "surface-container": "#1e2113",
+                        "on-tertiary-container": "#556774",
+                        "primary-fixed": "#c3f400",
+                        "on-secondary-fixed": "#3b0900",
+                        "on-primary-container": "#556d00",
+                        "inverse-surface": "#e2e4cf",
+                        "secondary-container": "#d73b00",
+                        "tertiary-fixed": "#d2e5f5",
+                        "on-background": "#e2e4cf",
+                        "on-secondary": "#5f1500",
+                        "surface-container-low": "#1a1d10",
+                        "background": "#111508",
+                        "on-secondary-container": "#fffbff",
+                        "tertiary": "#ffffff",
+                        "tertiary-fixed-dim": "#b6c9d8",
+                        "surface-container-high": "#282b1d",
+                        "on-tertiary-fixed-variant": "#374956",
+                        "surface": "#111508"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-desktop": "64px",
+                        "container-max": "1280px",
+                        "margin-mobile": "16px",
+                        "gutter": "24px",
+                        "unit": "4px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Hanken Grotesk"],
+                        "body-md": ["Hanken Grotesk"],
+                        "headline-sm": ["Anton"],
+                        "headline-lg": ["Anton"],
+                        "headline-xl": ["Anton"],
+                        "label-bold": ["Hanken Grotesk"],
+                        "headline-md": ["Anton"],
+                        "headline-xl-mobile": ["Anton"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "headline-sm": ["24px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "headline-lg": ["48px", {"lineHeight": "48px", "fontWeight": "400"}],
+                        "headline-xl": ["80px", {"lineHeight": "80px", "letterSpacing": "-0.02em", "fontWeight": "400"}],
+                        "label-bold": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "700"}],
+                        "headline-md": ["32px", {"lineHeight": "36px", "fontWeight": "400"}],
+                        "headline-xl-mobile": ["48px", {"lineHeight": "48px", "fontWeight": "400"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .speed-gradient {
+            background: linear-gradient(135deg, #7a9900 0%, #abd600 100%);
+        }
+        .speed-gradient:hover {
+            box-shadow: 0 0 15px rgba(171, 214, 0, 0.3);
+        }
+        .brutalist-border {
+            border: 1px solid #333333;
+        }
+        .text-glow:hover {
+            text-shadow: 0 0 10px rgba(171, 214, 0, 0.5);
+        }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md overflow-x-hidden selection:bg-primary-fixed-dim selection:text-black">
+<!-- TOP NAVIGATION BAR -->
+<header class="w-full top-0 sticky z-50 bg-background border-b border-outline-variant flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto">
+<div class="font-headline-lg text-headline-lg text-primary-fixed-dim tracking-tighter italic">TITAN PROTEIN</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="font-label-bold text-label-bold text-primary-fixed-dim border-b-2 border-primary-fixed-dim pb-1" href="#">WHEY</a>
+<a class="font-label-bold text-label-bold text-on-surface hover:text-primary-fixed-dim transition-colors duration-200" href="#">PLANT</a>
+<a class="font-label-bold text-label-bold text-on-surface hover:text-primary-fixed-dim transition-colors duration-200" href="#">ABOUT</a>
+<a class="font-label-bold text-label-bold text-on-surface hover:text-primary-fixed-dim transition-colors duration-200" href="#">MISSION</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-on-surface hover:text-primary-fixed-dim transition-colors">person</button>
+<div class="relative">
+<button class="material-symbols-outlined text-on-surface hover:text-primary-fixed-dim transition-colors">shopping_cart</button>
+<span class="absolute -top-2 -right-2 bg-secondary-container text-on-secondary-container text-[10px] font-bold px-1 rounded-full">3</span>
+</div>
+</div>
+</header>
+<main>
+<!-- HERO SECTION -->
+<section class="relative min-h-[921px] flex flex-col justify-center items-start overflow-hidden">
+<!-- Background Image -->
+<div class="absolute inset-0 z-0 scale-105" data-alt="A cinematic, high-contrast action shot of an intense bodybuilder lifting heavy weights in a gritty, industrial gym environment. The lighting is high-key with deep shadows that emphasize muscle texture and sweat. The overall aesthetic is dark charcoal and electric lime, creating a high-energy and aggressive atmosphere." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBb59Lw1e334FSQhOBJBpMtyf-4xuNf4Y6XL9jSWOtEc9o0CmF7Be5oPkv4eg1p7i2UCGCpreVCE7u-9KTECZwWVKtuJL3nnXxs1HEMjxO4mbJ9JD-daE8AtR7gvY0GeWYH2-Mm11EvdTWahd24ISJqZXr7dz0wtdLVANtD1Xw7QwavqgJ_BfhfsHugYzhIIZ92Qt_iqgKiQsiWBeZOLX3JPbmpLf2m-2LPETed6mJICTgrsIWTG52U')"></div>
+<div class="absolute inset-0 z-10 bg-gradient-to-r from-background via-background/60 to-transparent"></div>
+<div class="relative z-20 w-full px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto space-y-8">
+<div class="inline-block px-4 py-1 bg-primary-fixed-dim text-on-primary-fixed font-label-bold tracking-widest italic">ELITE PERFORMANCE NUTRITION</div>
+<h1 class="font-headline-xl-mobile md:font-headline-xl text-headline-xl-mobile md:text-headline-xl text-primary max-w-4xl uppercase leading-none">
+                    FUEL YOUR <span class="text-primary-fixed-dim">AMBITION</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
+                    Engineered for those who demand more. No fillers, no compromises. Pure, powerful, and scientifically formulated to crush your personal bests.
+                </p>
+<div class="flex flex-col sm:flex-row gap-4 pt-4">
+<button class="speed-gradient text-on-primary-fixed px-10 py-5 font-headline-sm text-headline-sm uppercase transition-transform active:scale-95">
+                        Shop Now
+                    </button>
+<button class="border-2 border-primary text-primary px-10 py-5 font-headline-sm text-headline-sm uppercase hover:bg-primary hover:text-background transition-all">
+                        Learn More
+                    </button>
+</div>
+</div>
+<!-- Scroll Indicator -->
+<div class="absolute bottom-10 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-2">
+<span class="font-label-bold text-on-surface-variant uppercase text-[10px] tracking-widest">Explore Titan</span>
+<div class="w-[1px] h-12 bg-outline-variant relative overflow-hidden">
+<div class="absolute top-0 left-0 w-full h-1/2 bg-primary-fixed-dim animate-bounce"></div>
+</div>
+</div>
+</section>
+<!-- FEATURED CATEGORIES -->
+<section class="py-24 bg-surface-container-lowest">
+<div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Category: WHEY -->
+<div class="group relative h-[500px] brutalist-border overflow-hidden cursor-pointer">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" data-alt="A high-resolution product shot of a sleek black whey protein tub with minimalist electric lime branding. The background is a dark, textured concrete wall with dramatic side lighting highlighting the container's form. The mood is powerful, masculine, and professional." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCmMSAHGoCDz7cRkLnKAaCUGOFONpgFqRPYPwl6GUGlIn9byuNVSGv5VgNkxb6YIGVrgYJnafp4rsD5jsCXcAi3yfdtoC-kaG3OgmZGCMV1bAfftPdbuMBXoUZjS7HLIafYMNt570uRdWAkQJRMh5ol1Uf964zL6xDYPrLFcRzMaJmnCNl_ODCPfR32e4xhWknm1HFex8o2-tS_brHcH28GCbwWZCUPEHj0rX_DqelrUfIOQIDHV1Rd')"></div>
+<div class="absolute inset-0 bg-black/40 group-hover:bg-primary-fixed-dim/20 transition-colors"></div>
+<div class="absolute bottom-0 left-0 p-8 w-full">
+<h2 class="font-headline-lg text-headline-lg text-white mb-2">WHEY</h2>
+<p class="font-body-md text-white/80 mb-4 opacity-0 group-hover:opacity-100 transition-opacity">Ultra-filtered isolate for rapid muscle recovery.</p>
+<span class="inline-flex items-center font-label-bold text-primary-fixed-dim gap-2 uppercase tracking-widest">
+                                Discover <span class="material-symbols-outlined">arrow_forward</span>
+</span>
+</div>
+</div>
+<!-- Category: PLANT -->
+<div class="group relative h-[500px] brutalist-border overflow-hidden cursor-pointer">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" data-alt="A clean, vibrant photography of plant-based protein ingredients like peas and brown rice in a high-contrast athletic setting. The color palette is dark charcoal with neon lime accents, creating a performance-driven look for vegan athletes. Sharp edges and gritty textures dominate the frame." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBN7CHSJPitFSnl8ktCmO9ZxQeSe4V8DwGkdWyP-luNFknGQhycufyJdV84XoDpztNCG9gZjqIrAbspWeFjJHQGD4BKln6VYZQLZBYsEm7I3jKY3qUGZbLHhzfzbWenKChGVx9PQj8gR87tP_nzmW9xSrXC2tmvPpyaqMM-bLkBL8l7__TAzvWY4E1LC6RPeQlyabESWxCM50uFmxeh7DIFMjZ84Off_e76IDljdyebiOGWe4CmHAiL')"></div>
+<div class="absolute inset-0 bg-black/40 group-hover:bg-primary-fixed-dim/20 transition-colors"></div>
+<div class="absolute bottom-0 left-0 p-8 w-full">
+<h2 class="font-headline-lg text-headline-lg text-white mb-2">PLANT</h2>
+<p class="font-body-md text-white/80 mb-4 opacity-0 group-hover:opacity-100 transition-opacity">Organic pea and rice blend. 25g protein per scoop.</p>
+<span class="inline-flex items-center font-label-bold text-primary-fixed-dim gap-2 uppercase tracking-widest">
+                                Discover <span class="material-symbols-outlined">arrow_forward</span>
+</span>
+</div>
+</div>
+<!-- Category: RECOVERY -->
+<div class="group relative h-[500px] brutalist-border overflow-hidden cursor-pointer">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" data-alt="A dynamic shot focusing on BCAA and electrolyte powders being mixed with water in a transparent shaker bottle. High-speed photography captures droplets in mid-air against a dark background. The lighting is cold and clinical, emphasizing the engineered nature of the performance recovery formula." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDJ1zJ7IrrCVUnixAAuaQpXB3dUzXEA5uExLVF2nOCYt20F8bTKUQ759daPjZmkEHV5g0D63QvUWOgH6GNKnidFpQnHApN_awDCvj5wXLSj7Dmmj59dTAoQaNNB7etOZnQuWnbcS8HtMF0fnoxKWtnnkeMmfdqmAMkUwrJcS4BeffeW9E4ZHVDQIVyZLpLNPCVzVAuP3vj4SPIPS0k9HMuqrEQBnekmshvd-1EpM3CeWjoSDVL75zQd')"></div>
+<div class="absolute inset-0 bg-black/40 group-hover:bg-primary-fixed-dim/20 transition-colors"></div>
+<div class="absolute bottom-0 left-0 p-8 w-full">
+<h2 class="font-headline-lg text-headline-lg text-white mb-2">RECOVERY</h2>
+<p class="font-body-md text-white/80 mb-4 opacity-0 group-hover:opacity-100 transition-opacity">Optimal BCAA ratio to stop muscle breakdown.</p>
+<span class="inline-flex items-center font-label-bold text-primary-fixed-dim gap-2 uppercase tracking-widest">
+                                Discover <span class="material-symbols-outlined">arrow_forward</span>
+</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- BEST SELLERS -->
+<section class="py-32">
+<div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="flex justify-between items-end mb-16">
+<div>
+<span class="font-label-bold text-primary-fixed-dim tracking-[0.2em] uppercase">The Arsenal</span>
+<h2 class="font-headline-lg text-headline-lg text-primary uppercase mt-2">BEST SELLERS</h2>
+</div>
+<a class="hidden md:flex items-center gap-2 font-label-bold text-on-surface hover:text-primary-fixed-dim transition-colors group" href="#">
+                        VIEW ALL PRODUCTS 
+                        <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">trending_flat</span>
+</a>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<!-- Product 1 -->
+<div class="brutalist-border bg-surface-container group p-6 flex flex-col h-full hover:border-primary-fixed-dim transition-colors">
+<div class="relative aspect-square mb-6 overflow-hidden bg-surface-container-low p-8">
+<img class="w-full h-full object-contain transition-transform group-hover:scale-105" data-alt="Premium whey protein isolate container standing on a dark, reflective surface. The packaging is matte black with bold, technical typography in electric lime. Dramatic rim lighting outlines the product against a pitch-black background, emphasizing its premium and powerful nature." src="https://lh3.googleusercontent.com/aida-public/AB6AXuANZK4NaCsQuWF-4dA2pSO_8rQ50gv5XP76jYigyYTVJTc8CiJBCfYrzFImQYUlwCxaYzPutHzoDZn2QFGVTNKVj5hHLJmoqTHQ40cfFrZy_kb--C_05tCGW7fnyAA1HvCv8ylbg84gst54muFJwqC8_yaKEcTxUyq_QtjBuCPRE4zgeZtMzwmIUfubTmmNsh0ywgvIIJZOffEmaVyq7HzgsslR_dywDZHCFX-4D88Y54xQscbcRR0d"/>
+<div class="absolute top-0 right-0 bg-secondary-container text-on-secondary-container font-label-bold px-3 py-1 text-[10px] uppercase italic">Top Rated</div>
+</div>
+<div class="flex-grow">
+<div class="flex items-center gap-1 mb-2">
+<span class="material-symbols-outlined text-primary-fixed-dim text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-primary-fixed-dim text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-primary-fixed-dim text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-primary-fixed-dim text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-primary-fixed-dim text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-[10px] text-on-surface-variant ml-1 font-label-bold">(1,240)</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-1">TITAN ISOLATE</h3>
+<p class="font-body-md text-on-surface-variant text-sm mb-4">Vanilla Glacial Strike • 2.2kg</p>
+</div>
+<div class="flex items-center justify-between mt-4">
+<span class="font-headline-sm text-headline-sm text-primary-fixed-dim">$64.99</span>
+<button class="bg-primary-fixed-dim text-on-primary-fixed px-4 py-2 font-label-bold uppercase active:scale-95 transition-transform">
+                                Add
+                            </button>
+</div>
+</div>
+<!-- Product 2 -->
+<div class="brutalist-border bg-surface-container group p-6 flex flex-col h-full hover:border-primary-fixed-dim transition-colors">
+<div class="relative aspect-square mb-6 overflow-hidden bg-surface-container-low p-8">
+<img class="w-full h-full object-contain transition-transform group-hover:scale-105" data-alt="A sleek black container of pre-workout supplement with glowing lime green accents on the label. The background is a dark gym floor with industrial textures. The product appears powerful and highly engineered, with professional studio lighting highlighting every detail of the design." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDSm0xKWcozaV2yaNcw9mnSEnkWy9kFAiS_ACzYt2QwbeVZeBrzYETZETAAPhCgBOvALdTinxZuYSikc2VmuBQ5JystVrD1zAwtMrTA0VRPTRaAgKsFOBk-8AYxJf5nQrf1_ARukdOWB9hR594LfdUEuzl_J20nmijSl-6X49c0YLHUKMHptS1CNuQ30Dneqyv8FhFWOYlBoiJaVTwWNdy5l28LvT9llzXm3Fc9QdXuCNNFL1vRD7th"/>
+</div>
+<div class="flex-grow">
+<div class="flex items-center gap-1 mb-2">
+<span class="material-symbols-outlined text-primary-fixed-dim text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-primary-fixed-dim text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-primary-fixed-dim text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-primary-fixed-dim text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-primary-fixed-dim text-sm" style="font-variation-settings: 'FILL' 1;">star_half</span>
+<span class="text-[10px] text-on-surface-variant ml-1 font-label-bold">(850)</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-1">TITAN PRE-GEN</h3>
+<p class="font-body-md text-on-surface-variant text-sm mb-4">Electric Grape Fury • 40 Servings</p>
+</div>
+<div class="flex items-center justify-between mt-4">
+<span class="font-headline-sm text-headline-sm text-primary-fixed-dim">$49.99</span>
+<button class="bg-primary-fixed-dim text-on-primary-fixed px-4 py-2 font-label-bold uppercase active:scale-95 transition-transform">
+                                Add
+                            </button>
+</div>
+</div>
+<!-- Product 3 -->
+<div class="brutalist-border bg-surface-container group p-6 flex flex-col h-full hover:border-primary-fixed-dim transition-colors">
+<div class="relative aspect-square mb-6 overflow-hidden bg-surface-container-low p-8">
+<img class="w-full h-full object-contain transition-transform group-hover:scale-105" data-alt="Vegan protein blend container in a minimalist dark environment. The label features earth-toned secondary colors combined with the signature Titan electric lime. The background has subtle organic textures like raw pea husks against dark stone, conveying purity and natural performance." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPECfpyId9Qh09ejEjNBty6FILmfB5e8BbBWBb2AoQJV4etESEcE1PtZUxSvFK7RJ8azv4gR5zX_ssLWBev5Lvl5ZeZ6GVSDMdq6O-gpmwL9q6f5vkmb6Ys5oOm9MMeZeiFMBjZihUiRAaH6ERQzqlqPQ55FSl0jMrkb8QXLPzkFdEOjjncI-TxuNEQ5CfNfIzYEGFeVQQtPUToqYPTC5LRyGWIjkV3rJCZt90P_fnxZytKEz0Md1n"/>
+</div>
+<div class="flex-grow">
+<div class="flex items-center gap-1 mb-2">
+<span class="material-symbols-outlined text-primary-fixed-dim text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-primary-fixed-dim text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-primary-fixed-dim text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-primary-fixed-dim text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-primary-fixed-dim text-sm" style="font-variation-settings: 'FILL' 0;">star</span>
+<span class="text-[10px] text-on-surface-variant ml-1 font-label-bold">(512)</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-1">PLANT TITAN</h3>
+<p class="font-body-md text-on-surface-variant text-sm mb-4">Unsweetened Chocolate • 1kg</p>
+</div>
+<div class="flex items-center justify-between mt-4">
+<span class="font-headline-sm text-headline-sm text-primary-fixed-dim">$44.99</span>
+<button class="bg-primary-fixed-dim text-on-primary-fixed px-4 py-2 font-label-bold uppercase active:scale-95 transition-transform">
+                                Add
+                            </button>
+</div>
+</div>
+<!-- Product 4 -->
+<div class="brutalist-border bg-surface-container group p-6 flex flex-col h-full hover:border-primary-fixed-dim transition-colors">
+<div class="relative aspect-square mb-6 overflow-hidden bg-surface-container-low p-8">
+<img class="w-full h-full object-contain transition-transform group-hover:scale-105" data-alt="A tub of high-quality Creatine Monohydrate with a clean, laboratory-inspired label design. Black matte surface with neon green text. The product is surrounded by dark, crushed ice, suggesting fresh purity and advanced chemical engineering for athletic performance. High-key lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBPSbxvKc-4BqWyjabbnXMU1_OcaGhelwDHnj2JGqizUGb_4p7G1HkO7oZbAEM-lqAtVcRS4ITITak9495K6mbYW7x3wh9mwzw0ts0mYMcv9tlUQc8pFGMdsN_PSKupYfohxjEV5C9Z23sDecTZKWju4nWNs4AB3PcjS8eANb0pYxtlUoRyDawf239OwUwFqYPsDixcBWc8gbSo2_pPq6UgM0gG-Y_65kZ2BMwQaE8LvSSJR73qcrLK"/>
+</div>
+<div class="flex-grow">
+<div class="flex items-center gap-1 mb-2">
+<span class="material-symbols-outlined text-primary-fixed-dim text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-primary-fixed-dim text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-primary-fixed-dim text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-primary-fixed-dim text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-primary-fixed-dim text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-[10px] text-on-surface-variant ml-1 font-label-bold">(2,105)</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-1">TITAN MONO</h3>
+<p class="font-body-md text-on-surface-variant text-sm mb-4">Micronized Creatine • 500g</p>
+</div>
+<div class="flex items-center justify-between mt-4">
+<span class="font-headline-sm text-headline-sm text-primary-fixed-dim">$29.99</span>
+<button class="bg-primary-fixed-dim text-on-primary-fixed px-4 py-2 font-label-bold uppercase active:scale-95 transition-transform">
+                                Add
+                            </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- WHY TITAN SECTION -->
+<section class="py-32 bg-surface-container-high border-y border-outline-variant">
+<div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
+<div class="order-2 lg:order-1">
+<div class="relative brutalist-border p-2">
+<img class="w-full h-auto" data-alt="A detailed, macro close-up of high-quality protein powder texture, looking like a desert landscape of white dunes. Lighting is dramatic and directional, creating deep shadows that emphasize purity and fine micronization. The mood is clinical, clean, and engineered, aligned with high-end sports nutrition science." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDLucaEPDIF_GgzZvbm_0Yd0ZrZ3Iv3VOOnBSJQvbxLeoFRBufoTeSO5z4QmCopeb8-0zlQH3X4_1TKQ2N1NUq2oRtPwyPkZGUAPq_tAby3urUvjBl2mfgd8zfdB3nbDsIV05PDeYz-ds0PJ5k3JvJfvGg5YsjREEGRG0x2BW6pAwn1pIRlLLkwbhEAGhmlSIU5vDi_Bl3gb9kL-UkkNST6FYQboVSPXKH2bmlULBjuXq0FMIKf2q4L"/>
+<div class="absolute -top-6 -right-6 w-32 h-32 bg-primary-fixed-dim flex items-center justify-center p-6 text-on-primary-fixed font-headline-sm text-center leading-tight italic">
+                            100% PURE
+                        </div>
+</div>
+</div>
+<div class="order-1 lg:order-2 space-y-8">
+<span class="font-label-bold text-primary-fixed-dim tracking-[0.2em] uppercase">The Science</span>
+<h2 class="font-headline-lg text-headline-lg text-primary uppercase">WHY TITAN?</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+                        We don't just sell supplements; we engineer performance. Every batch of Titan Protein undergoes rigorous third-party testing to ensure it meets our aggressive standards for purity and bio-availability.
+                    </p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 pt-8 border-t border-outline-variant">
+<div>
+<h4 class="font-headline-sm text-headline-sm text-primary mb-2">MAX ABSORPTION</h4>
+<p class="font-body-md text-on-surface-variant">Our cross-flow micro-filtration process keeps protein fractions intact for rapid muscle delivery.</p>
+</div>
+<div>
+<h4 class="font-headline-sm text-headline-sm text-primary mb-2">ZERO FILLERS</h4>
+<p class="font-body-md text-on-surface-variant">No amino-spiking, no hidden sugars, no proprietary blends. Transparency is our mandate.</p>
+</div>
+</div>
+<button class="flex items-center gap-4 text-primary font-headline-sm text-headline-sm uppercase group">
+<span class="bg-primary text-background p-2 transition-transform group-hover:scale-110">
+<span class="material-symbols-outlined">science</span>
+</span>
+                        View Lab Results
+                    </button>
+</div>
+</div>
+</section>
+<!-- NEWSLETTER SIGNUP -->
+<section class="py-32 relative overflow-hidden">
+<div class="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
+<!-- Decorative background elements -->
+<div class="absolute top-1/2 left-0 w-[500px] h-[500px] border border-primary-fixed-dim rotate-45 -translate-x-1/2 -translate-y-1/2"></div>
+<div class="absolute top-1/2 right-0 w-[300px] h-[300px] bg-primary-fixed-dim/20 rounded-full blur-3xl -translate-y-1/2"></div>
+</div>
+<div class="relative z-10 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto text-center space-y-8">
+<h2 class="font-headline-lg text-headline-lg text-primary uppercase max-w-3xl mx-auto">JOIN THE <span class="text-primary-fixed-dim">TITAN ELITE</span></h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl mx-auto">Get training tips, nutrition deep-dives, and exclusive early access to new drop releases.</p>
+<form class="max-w-md mx-auto flex flex-col md:flex-row gap-0 border border-outline-variant">
+<input class="flex-grow bg-surface-container-high border-none text-on-surface font-label-bold px-6 py-5 focus:ring-0 focus:border-primary-fixed-dim placeholder:text-on-surface-variant" placeholder="YOUR EMAIL ADDRESS" type="email"/>
+<button class="speed-gradient text-on-primary-fixed font-headline-sm text-headline-sm uppercase px-8 py-5 transition-transform active:scale-95" type="submit">
+                        Join
+                    </button>
+</form>
+<p class="text-[10px] text-on-surface-variant font-label-bold tracking-widest uppercase opacity-50">By joining, you agree to our Terms of Performance.</p>
+</div>
+</section>
+</main>
+<!-- FOOTER -->
+<footer class="w-full bg-surface-dim border-t border-outline-variant">
+<div class="px-margin-mobile md:px-margin-desktop py-12 max-w-container-max mx-auto flex flex-col md:flex-row justify-between items-start gap-12">
+<div class="space-y-6 max-w-sm">
+<div class="font-headline-md text-headline-md text-primary-fixed-dim tracking-tighter italic">TITAN PROTEIN</div>
+<p class="font-body-md text-on-surface-variant">The leading high-performance athletic nutrition brand. Engineered for those who refuse to settle for mediocrity.</p>
+<div class="flex gap-4">
+<a class="w-10 h-10 border border-outline-variant flex items-center justify-center hover:bg-primary-fixed-dim hover:text-black transition-colors" href="#">
+<span class="material-symbols-outlined text-sm">share</span>
+</a>
+<a class="w-10 h-10 border border-outline-variant flex items-center justify-center hover:bg-primary-fixed-dim hover:text-black transition-colors" href="#">
+<span class="material-symbols-outlined text-sm">bolt</span>
+</a>
+<a class="w-10 h-10 border border-outline-variant flex items-center justify-center hover:bg-primary-fixed-dim hover:text-black transition-colors" href="#">
+<span class="material-symbols-outlined text-sm">fitness_center</span>
+</a>
+</div>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-3 gap-12">
+<div class="space-y-4">
+<h5 class="font-label-bold text-primary-fixed-dim tracking-widest uppercase">SHOP</h5>
+<ul class="space-y-2 font-body-md text-on-surface-variant">
+<li><a class="hover:text-primary-fixed-dim transition-colors" href="#">WHEY</a></li>
+<li><a class="hover:text-primary-fixed-dim transition-colors" href="#">PLANT</a></li>
+<li><a class="hover:text-primary-fixed-dim transition-colors" href="#">RECOVERY</a></li>
+<li><a class="hover:text-primary-fixed-dim transition-colors" href="#">BUNDLES</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<h5 class="font-label-bold text-primary-fixed-dim tracking-widest uppercase">COMPANY</h5>
+<ul class="space-y-2 font-body-md text-on-surface-variant">
+<li><a class="hover:text-primary-fixed-dim transition-colors" href="#">ABOUT</a></li>
+<li><a class="hover:text-primary-fixed-dim transition-colors" href="#">MISSION</a></li>
+<li><a class="hover:text-primary-fixed-dim transition-colors" href="#">LAB TESTS</a></li>
+<li><a class="hover:text-primary-fixed-dim transition-colors" href="#">WHOLESALE</a></li>
+</ul>
+</div>
+<div class="space-y-4 col-span-2 md:col-span-1">
+<h5 class="font-label-bold text-primary-fixed-dim tracking-widest uppercase">SUPPORT</h5>
+<ul class="space-y-2 font-body-md text-on-surface-variant">
+<li><a class="hover:text-primary-fixed-dim transition-colors" href="#">CONTACT</a></li>
+<li><a class="hover:text-primary-fixed-dim transition-colors" href="#">SHIPPING</a></li>
+<li><a class="hover:text-primary-fixed-dim transition-colors" href="#">RETURNS</a></li>
+<li><a class="hover:text-primary-fixed-dim transition-colors" href="#">FAQ</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="px-margin-mobile md:px-margin-desktop py-8 max-w-container-max mx-auto border-t border-outline-variant/30 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="font-label-bold text-[10px] text-on-surface-variant/60 uppercase">© 2024 TITAN PROTEIN. ENGINEERED FOR PERFORMANCE.</p>
+<div class="flex gap-6">
+<a class="font-label-bold text-[10px] text-on-surface-variant/60 hover:text-primary-fixed-dim transition-colors uppercase" href="#">PRIVACY</a>
+<a class="font-label-bold text-[10px] text-on-surface-variant/60 hover:text-primary-fixed-dim transition-colors uppercase" href="#">TERMS</a>
+</div>
+</div>
+</footer>
+<script>
+        // Intersection Observer for fade-in animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                }
+            });
+        }, observerOptions);
+
+        // Apply animations to sections
+        document.querySelectorAll('section').forEach(section => {
+            if (!section.classList.contains('relative')) { // Skip hero which needs different timing
+                section.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-10');
+                observer.observe(section);
+            }
+        });
+
+        // Simple button click micro-interaction
+        document.querySelectorAll('button').forEach(btn => {
+            btn.addEventListener('click', function() {
+                this.classList.add('scale-95');
+                setTimeout(() => this.classList.remove('scale-95'), 100);
+            });
+        });
+    </script>
+</body></html>
